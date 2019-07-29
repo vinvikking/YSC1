@@ -103,7 +103,6 @@ font-family: 'Numans', sans-serif;
                                                         </a>
                                                     @endif
                                                 </div>
-                                                <p>test</p>
                                             </div>
                                         </form>
 
