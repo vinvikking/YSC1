@@ -20,15 +20,23 @@ return [
     'menu' => [
          [
             'permission' => 'see leerlingen',
-            'text' => 'Campagnes',
-            'url'  => '/campagnes',
+            'text' => 'Influencer',
+            'url'  => '/Influencer',
             'icon' => 'bell far',
+            'submenu' => [
+                [
+                    'text' => 'Statestieken',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ]
+            ]
          ],
          [
             'text' => 'Admin',
             'url'  => '/admin',
             'icon' => 'person far',
          ]
+
 //        [
 //            'text' => 'Dashboard',          // The text to be displayed inside the menu.
 //            'url' => 'admin/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
