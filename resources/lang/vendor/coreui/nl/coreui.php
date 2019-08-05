@@ -2,7 +2,7 @@
 
 return [
 
-    'default_title'               => 'CoreUI Laravel Theme door HZ-HBO-ICT',
+    'default_title'               => 'Your Social Connect 2019',
     'settings'                    => 'Instellingen',
     'full_name'                   => 'Volledige naam',
     'email'                       => 'E-mailadres',
