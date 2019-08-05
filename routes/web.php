@@ -28,7 +28,7 @@ Route::Group(['middleware' => ['auth']], function() {
 
 Auth::routes();
 
-Route::resource('campagnes', 'CampagneController');
+Route::resource('campagnes', 'CampaignController');
 
 Route::resource('analytics', 'AnalyticsController');
 
