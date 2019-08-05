@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Campagne extends Model
+class Campaign extends Model
 {
-    protected $table = 'campagne';
+    protected $table = 'campaign';
     protected $fillable = [
     	'E-mail',
     //     'aanmeldings_type_id',
