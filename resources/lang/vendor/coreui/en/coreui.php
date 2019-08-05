@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default_title'               => 'CoreUI Laravel Theme by HZ-HBO-ICT',
+    'default_title'               => 'Your Social Connect 2019',
     'settings'                    => 'Settings',
     'full_name'                   => 'Full name',
     'email'                       => 'Email',

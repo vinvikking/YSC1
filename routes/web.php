@@ -30,4 +30,6 @@ Auth::routes();
 
 Route::resource('campagnes', 'CampagneController');
 
+Route::resource('analytics', 'AnalyticsController');
+
 Route::get('/home', 'HomeController@index')->name('home');
