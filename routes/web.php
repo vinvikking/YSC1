@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('auth/login');
 });
@@ -26,10 +28,16 @@ Route::Group(['middleware' => ['auth']], function() {
 });
 
 
-Auth::routes();
 
-Route::resource('campagnes', 'CampaignController');
 
+//Campaign routing
+// Parents
+Route::get('campagnes/search', 'CampaignController@search')->name('campagnesS');
+Route::resource('/campagnes', 'CampaignController');
+//Route::resource('campagnes', 'CampaignController');
+
+//Analytics routing
 Route::resource('analytics', 'AnalyticsController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+

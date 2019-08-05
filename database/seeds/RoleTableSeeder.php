@@ -22,7 +22,7 @@ class RoleTableSeeder extends Seeder
 
     $role_manager = new Role();
     $role_manager->name = 'Influencer';
-    $role_manager->description = 'A Influener User';
+    $role_manager->description = 'A Influencer User';
     $role_manager->save();
 
     $role_company = new Role();
