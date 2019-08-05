@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CampaignAnalyticsController extends Controller
+class AnalyticsController extends Controller
 {
     /**
      * Display a listing of the resource.

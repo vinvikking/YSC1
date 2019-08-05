@@ -25,7 +25,63 @@ return [
             'icon' => 'bell far',
             'submenu' => [
                 [
-                    'text' => 'Statestieken',
+                    'text' => 'Alle campagnes',
+                    'icon' => 'bell far',
+                    'url'  => '/campagnes',    
+                ],
+                [
+                    'text' => 'Actieve campagnes',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Statistieken',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ]
+            ]
+         ],
+         [
+            'permission' => 'see leerlingen',
+            'text' => 'Business',
+            'url'  => '/Business',
+            'icon' => 'bell far',
+            'submenu' => [
+                [
+                    'text' => 'Alle campagnes',
+                    'icon' => 'bell far',
+                    'url'  => '/campagnes',    
+                ],
+                [
+                    'text' => 'Actieve campagnes',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                     [
+                    'text' => 'Statistieken',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ]
+            ]
+         ],
+         [
+            'permission' => 'see leerlingen',
+            'text' => 'Business Analytics',
+            'url'  => '/analytics',
+            'icon' => 'bell far',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'icon' => 'bell far',
+                    'url'  => '/analytics',    
+                ],
+                                [
+                    'text' => 'Reporting',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Export wizard',
                     'icon' => 'bell far',
                     'url'  => '#',    
                 ]
@@ -35,6 +91,28 @@ return [
             'text' => 'Admin',
             'url'  => '/admin',
             'icon' => 'person far',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                                [
+                    'text' => 'Abonnementen',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Beheer Subscribers',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Extra',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+            ]
          ]
 
 //        [
