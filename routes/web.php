@@ -30,11 +30,13 @@ Route::Group(['middleware' => ['auth']], function() {
 
 
 
-//Campaign routing
-// Parents
+//Business routing
+// Campaign
 Route::get('campagnes/search', 'CampaignController@search')->name('campagnesS');
 Route::resource('/campagnes', 'CampaignController');
-//Route::resource('campagnes', 'CampaignController');
+//Influencer List
+Route::get('influencers/search', 'InfluencerController@search')->name('influencersS');
+Route::resource('/influencers', 'InfluencerController');
 
 //Analytics routing
 Route::resource('analytics', 'AnalyticsController');

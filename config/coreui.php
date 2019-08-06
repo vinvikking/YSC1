@@ -27,17 +27,17 @@ return [
                 [
                     'text' => 'Alle campagnes',
                     'icon' => 'bell far',
-                    'url'  => '/campagnes',    
+                    'url'  => '/campaign/list',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
                     'icon' => 'bell far',
-                    'url'  => '#',    
+                    'url'  => '/campaign/active',    
                 ],
                 [
                     'text' => 'Statistieken',
                     'icon' => 'bell far',
-                    'url'  => '#',    
+                    'url'  => '/influencer/statistics',    
                 ]
             ]
          ],
@@ -56,6 +56,11 @@ return [
                     'text' => 'Actieve campagnes',
                     'icon' => 'bell far',
                     'url'  => '#',    
+                ],
+                [
+                    'text' => 'Lijst Influencers',
+                    'icon' => 'bell far',
+                    'url'  => '/influencers',    
                 ],
                      [
                     'text' => 'Statistieken',
