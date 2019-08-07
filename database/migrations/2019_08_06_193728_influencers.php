@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCampagne extends Migration
+class Influencers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateCampagne extends Migration
      */
     public function up()
     {
-        Schema::create('campaign', function (Blueprint $table) {
+        Schema::create('influencers', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image');
             $table->timestamps();
-
-
-        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -33,6 +30,6 @@ class CreateCampagne extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campaign');
+        Schema::dropIfExists('influencers');
     }
 }

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Campagne;
 use Illuminate\Http\Request;
 
-class CampagneController extends Controller
+class AnalyticsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,9 @@ class CampagneController extends Controller
      */
     public function index()
     {
-        // $s = auth()->user()
-        return view('campagnes.index');
+        //
+                // $s = auth()->user()
+        return view('analytics.index');
     }
 
     /**
@@ -25,7 +25,9 @@ class CampagneController extends Controller
      */
     public function create()
     {
-        return view('campagnes.index');
+        //
+                // $s = auth()->user()
+        return view('analytics.create');
     }
 
     /**
@@ -42,10 +44,10 @@ class CampagneController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Campagne  $campagne
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Campagne $campagne)
+    public function show($id)
     {
         //
     }
@@ -53,10 +55,10 @@ class CampagneController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Campagne  $campagne
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Campagne $campagne)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +67,10 @@ class CampagneController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Campagne  $campagne
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Campagne $campagne)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +78,10 @@ class CampagneController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Campagne  $campagne
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Campagne $campagne)
+    public function destroy($id)
     {
         //
     }

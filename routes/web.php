@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('auth/login');
 });
@@ -26,8 +28,18 @@ Route::Group(['middleware' => ['auth']], function() {
 });
 
 
-Auth::routes();
 
-Route::resource('campagnes', 'CampagneController');
+
+//Business routing
+// Campaign
+Route::get('campagnes/search', 'CampaignController@search')->name('campagnesS');
+Route::resource('/campagnes', 'CampaignController');
+//Influencer List
+Route::get('influencers/search', 'InfluencerController@search')->name('influencersS');
+Route::resource('/influencers', 'InfluencerController');
+
+//Analytics routing
+Route::resource('analytics', 'AnalyticsController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+

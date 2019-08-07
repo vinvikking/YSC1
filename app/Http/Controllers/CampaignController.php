@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Influencer;
-use App\User;
+use App\Campaign;
 use Illuminate\Http\Request;
 
-class InfluencerController extends Controller
+class CampaignController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,12 @@ class InfluencerController extends Controller
      */
     public function index()
     {
-        //$influencers = influencer::all();
-        $influencers = User::all();
+
+
+
+        $campagnes = Campaign::all();
         // $s = auth()->user()
-       return view('influencers.index', compact('influencers'));
+       return view('campagnes.index', compact('campagnes'));
     }
 
     /**
@@ -28,7 +29,7 @@ class InfluencerController extends Controller
      */
     public function create()
     {
-        return view('influencers.create');
+        return view('campagnes.create');
     }
 
     /**
@@ -45,34 +46,33 @@ class InfluencerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Influencer  $influencer
+     * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function show(Influencer $influencer)
+    public function show(Campagne $campagne)
     {
-        //
-        return view('influencers.show', compact('influencers'));
+        return view('campagnes.show', compact('campagnes'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Influencer  $influencer
+     * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function edit(Influencer $influencer)
+    public function edit(Campagne $campagne)
     {
-        //
+        return view('campagnes.edit', compact('campagnes'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Influencer  $influencer
+     * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Influencer $influencer)
+    public function update(Request $request, Campagne $campagne)
     {
         //
     }
@@ -80,34 +80,42 @@ class InfluencerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Influencer  $influencer
+     * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Influencer $influencer)
+    public function destroy(Campagne $campagne)
     {
         //
     }
 
-        public function search(Request $request) {
+    /**
+     *  Searches in the resources.
+     *
+     * @param $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function search(Request $request) {
         $search = htmlspecialchars($request->get('q'));
         $term = strtolower($request->get('term'));
 
         switch ($term) {
             // TODO: No longer search on ID.
-            case "naam":
-                $influencers = User::query()->where('name', 'like', "%$search%")->get();
+            case "titel":
+                $campagnes = Campaign::query()->where('title', 'like', "%$search%")->get();
                 break;
 
-            case "email":
-                $influencers = User::query()->where('email', 'like', "%$search%")->get();
+            case "omschrijving":
+                $campagnes = Campaign::query()->where('description', 'like', "%$search%")->get();
                 break;
 
             default:
                 toastError("'$term' is geen geldige zoekterm.");
 
-                return redirect()->to(route('influencers.index'));
+                return redirect()->to(route('campagnes.index'));
         }
 
-        return view('influencers.index', compact('influencers', 'search', 'term'));
+        return view('campagnes.index', compact('campagnes', 'search', 'term'));
     }
+
 }
