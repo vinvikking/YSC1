@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
-use App\Role;
 use App\Campaign;
 
-class CampaignTableSeeder extends Seeder
+class CampaignSeed extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +12,6 @@ class CampaignTableSeeder extends Seeder
      */
     public function run()
     {
-    
     $campaign1 = new Campaign();
     $campaign1->id = '1';
     $campaign1->user_id = '1';
@@ -38,7 +35,5 @@ class CampaignTableSeeder extends Seeder
     $campaign3->description = 'Op reis naar Afrika!';
     $campaign3->image = '0';
     $campaign3->save();
-
-
     }
 }

@@ -14,15 +14,15 @@ class CreateCampagne extends Migration
     public function up()
     {
         Schema::create('campaign', function (Blueprint $table) {
-            $table->Increments('id');
+            $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image');
             $table->timestamps();
 
-
-        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+           // $table->foreign('user_id')->references('id')->on('users')->onDelete('delete');
+        
         });
     }
 
