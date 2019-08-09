@@ -22,21 +22,21 @@ return [
             'permission' => 'see leerlingen',
             'text' => 'Influencer',
             'url'  => '/Influencer',
-            'icon' => 'bell far',
+            'icon' => 'users fas',
             'submenu' => [
                 [
                     'text' => 'Alle campagnes',
-                    'icon' => 'bell far',
+                    'icon' => 'calendar-alt far',
                     'url'  => '/campaign/list',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
-                    'icon' => 'bell far',
+                    'icon' => 'star far',
                     'url'  => '/campaign/active',    
                 ],
                 [
                     'text' => 'Statistieken',
-                    'icon' => 'bell far',
+                    'icon' => 'chart-line fas',
                     'url'  => '/influencer/statistics',    
                 ]
             ]
@@ -45,26 +45,26 @@ return [
             'permission' => 'see leerlingen',
             'text' => 'Business',
             'url'  => '/Business',
-            'icon' => 'bell far',
+            'icon' => 'user-tie fas',
             'submenu' => [
                 [
                     'text' => 'Alle campagnes',
-                    'icon' => 'bell far',
+                    'icon' => 'calendar-alt far',
                     'url'  => '/campagnes',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
-                    'icon' => 'bell far',
+                    'icon' => 'star far',
                     'url'  => '#',    
                 ],
                 [
                     'text' => 'Lijst Influencers',
-                    'icon' => 'bell far',
+                    'icon' => 'list fas',
                     'url'  => '/influencers',    
                 ],
                      [
                     'text' => 'Statistieken',
-                    'icon' => 'bell far',
+                    'icon' => 'chart-line fas',
                     'url'  => '#',    
                 ]
             ]
@@ -73,7 +73,7 @@ return [
             'permission' => 'see leerlingen',
             'text' => 'Business Analytics',
             'url'  => '/analytics',
-            'icon' => 'bell far',
+            'icon' => 'eye far',
             'submenu' => [
                 [
                     'text' => 'Dashboard',
@@ -88,6 +88,29 @@ return [
                 [
                     'text' => 'Export wizard',
                     'icon' => 'bell far',
+                    'url'  => '#',    
+                ]
+            ]
+         ],
+                  [
+            'permission' => 'see leerlingen',
+            'text' => 'Abonnement',
+            'url'  => '/subscription',
+            'icon' => 'wallet fas',
+            'submenu' => [
+                [
+                    'text' => 'Overzicht',
+                    'icon' => 'file-invoice fas',
+                    'url'  => '/subscription/list',    
+                ],
+                                [
+                    'text' => 'Beheren',
+                    'icon' => 'cogs fas',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Feedback',
+                    'icon' => 'comment-dots fas',
                     'url'  => '#',    
                 ]
             ]

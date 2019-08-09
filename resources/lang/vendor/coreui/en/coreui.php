@@ -2,7 +2,7 @@
 
 return [
     'default_title'               => 'Your Social Connect 2019',
-    'settings'                    => 'Settings',
+    'settings'                    => 'User Settings',
     'full_name'                   => 'Full name',
     'email'                       => 'Email',
     'password'                    => 'Password',
@@ -21,5 +21,6 @@ return [
     'reset_password'              => 'Reset Password',
     'send_password_reset_link'    => 'Send Password Reset Link',
     'enter_email_message'         => 'Please enter your email address',
+    'url_profilepage'             => 'Your profile',
 
 ];

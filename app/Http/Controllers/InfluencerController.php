@@ -88,7 +88,8 @@ class InfluencerController extends Controller
         //
     }
 
-        public function search(Request $request) {
+    
+    public function search(Request $request) {
         $search = htmlspecialchars($request->get('q'));
         $term = strtolower($request->get('term'));
 

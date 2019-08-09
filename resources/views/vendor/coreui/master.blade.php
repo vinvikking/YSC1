@@ -42,13 +42,20 @@
                         </div>
                         @if(Auth::user()->choice == "1")
                         <div class="dropdown-item text-center">
-                           <p>Welkom Influencer</p>
+                           <p>Hallo Influencer</p>
                         </div>
                         @else
                         <div class="dropdown-item text-center">
                             <p>Welkom Opdrachtgever</p>
                         </div>
                         @endif
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.url_profilepage') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
+                            @csrf
+                        </form>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.log_out') }}

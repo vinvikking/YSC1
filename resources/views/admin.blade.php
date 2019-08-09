@@ -16,7 +16,7 @@
         <div class="card-header"> 
            	<div class="card-body">
            		<div class="card">
-          			<a class="btn btn-primary" href="{{route('influencers.create')}}">Kak</a>	
+          			<a class="btn btn-primary" href="{{route('influencers.create')}}">Influencers test</a>	
            		</div>
            	</div>
           </div>
