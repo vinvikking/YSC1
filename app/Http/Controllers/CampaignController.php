@@ -20,6 +20,7 @@ class CampaignController extends Controller
         $campagnes = Campaign::all();
         // $s = auth()->user()
        return view('campagnes.index', compact('campagnes'));
+       
     }
 
     /**
@@ -101,7 +102,7 @@ class CampaignController extends Controller
 
         switch ($term) {
             // TODO: No longer search on ID.
-            case "titel":
+            case "campagne":
                 $campagnes = Campaign::query()->where('title', 'like', "%$search%")->get();
                 break;
 

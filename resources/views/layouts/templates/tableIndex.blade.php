@@ -32,7 +32,7 @@
             </div>
             <div class="text-muted"><b>{{$results->count() == 1 ? $results->count() . ' resultaat' : $results->count() . ' resultaten'}}</b></div>
             {{-- Add new result --}}
-            <a class="btn btn-success float-right font-weight-bold" href=""><i class="fas fa-plus mr-2"></i>Nieuwe {{strtolower($data->columns[0])}}</a>
+            <a class="btn btn-success float-right font-weight-bold" href="{{route($url . '.create')}}"><i class="fas fa-plus mr-2"></i>Nieuwe {{strtolower($data->columns[1])}}</a>
         </nav>
     </div>
     <div class="card-body">

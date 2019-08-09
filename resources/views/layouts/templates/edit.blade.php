@@ -1,7 +1,7 @@
 @extends('coreui::master')
 
 @section('title')
-    @yield('page_title') - ZWIN College
+    @yield('page_title') - YSC
 @endsection
 
 @section('body')

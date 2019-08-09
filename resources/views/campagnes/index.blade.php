@@ -12,8 +12,8 @@
         'data' => (object) [
             'url' => 'campagnes',
             'results' => $campagnes,
-            'terms' => ['titel', 'omschrijving'],
-            'columns' => ['id', 'Titel', 'Omschrijving'],
+            'terms' => ['campagne', 'omschrijving'],
+            'columns' => ['id', 'Campagne', 'Omschrijving'],
         ]
     ])
     @foreach ($campagnes as $campagne)
