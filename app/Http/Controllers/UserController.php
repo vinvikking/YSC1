@@ -83,13 +83,4 @@ class UserController extends Controller
         //
     }
 
-
-
-    public function admin(){
-        return view('admin.admin');
-    }
-
-    public function user(){
-        return view('admin.blade.php');
-    }
 }

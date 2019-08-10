@@ -15,27 +15,31 @@ class UserTableSeeder extends Seeder
     {
     
 
-    $role_influencer = Role::where('name', 'Influencer')->first();
-    $role_company  = Role::where('name', 'Company')->first();
-    $role_admin  = Role::where('name', 'Admin')->first();
+    // $role_influencer = Role::where('name', 'Influencer')->first();
+    // $role_company  = Role::where('name', 'Company')->first();
+    // $role_admin  = Role::where('name', 'Admin')->first();
+
+
 
     $influencer = new User();
-    $influencer->name = 'Default Influencer Name';
-    $influencer->email = 'employee@example.com';
-    $influencer->choice = 1; // Influencer
+    $influencer->name = 'Default influencer Name';
+    $influencer->email = 'influencer@example.com';
+    $influencer->choice_type = 'App\Influencer'; // Influencer
     $influencer->password = bcrypt('secret');
     $influencer->save();
-    $influencer->roles()->attach($role_influencer);
+
+    $influencer->assignRole('influencer');
+    // $influencer->roles()->attach($role_influencer);
 
 
-    $company = new User();
-    $company->name = 'Default Company Name';
-    $company->email = 'company@example.com';
-    $company->choice = 2; // Company User
-    $company->password = bcrypt('secret');
-    $company->save();
-
-    $company->roles()->attach($role_company);
+    $business = new User();
+    $business->name = 'Default business Name';
+    $business->email = 'business@example.com';
+    $business->choice_type = 'App\Business'; // Business User
+    $business->password = bcrypt('secret');
+    $business->save();
+    $business->assignRole('business');
+    // $company->roles()->attach($role_company);
 
 
     // Vincent + Derek 
@@ -43,20 +47,22 @@ class UserTableSeeder extends Seeder
     $Vincent = new User();
     $Vincent->name = 'Vincent Roeland';
     $Vincent->email = 'vincentroeland@laravel.com';
-    $Vincent->choice = 2; // Company User
+    $Vincent->choice_type = 'Admin'; // Business User
     $Vincent->password = bcrypt('secret');
     $Vincent->save();
+    $Vincent->assignRole('superadmin');
 
-    $Vincent->roles()->attach($role_admin);
+    // $Vincent->roles()->attach($role_admin);
 
     $derek = new User();
     $derek->name = 'Derek de Witte';
     $derek->email = 'derek@laravel.com';
-    $derek->choice = 2; // Company User
+    $derek->choice = 'Admin'; // Business User
     $derek->password = bcrypt('secret');
     $derek->save();
 
-    $derek->roles()->attach($role_admin);
+    $derek->assignRole('superadmin');
+    // $derek->roles()->attach($role_admin);
 
 
     }

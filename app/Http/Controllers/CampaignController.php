@@ -14,7 +14,8 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        // $s = auth()->user()
+
+        //$s = auth()->user()
         return view('campagnes.index');
     }
 

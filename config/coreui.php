@@ -21,22 +21,19 @@ return [
          [
             'permission' => 'see leerlingen',
             'text' => 'Influencer',
-            'url'  => '/Influencer',
-            'icon' => 'bell far',
+            'url'  => '/influencers',
+            'icon' => 'user-graduate fas',
             'submenu' => [
                 [
                     'text' => 'Alle campagnes',
-                    'icon' => 'bell far',
-                    'url'  => '/campagnes',    
+                    'url'  => '/influencers',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
-                    'icon' => 'bell far',
                     'url'  => '#',    
                 ],
                 [
                     'text' => 'Statistieken',
-                    'icon' => 'bell far',
                     'url'  => '#',    
                 ]
             ]
@@ -49,7 +46,6 @@ return [
             'submenu' => [
                 [
                     'text' => 'Alle campagnes',
-                    'icon' => 'bell far',
                     'url'  => '/campagnes',    
                 ],
                 [

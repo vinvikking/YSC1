@@ -15,15 +15,15 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::Group(['middleware' => ['auth']], function() {
+// Route::Group(['middleware' => ['auth']], function() {
 
-	Route::get('/home', 'UserController@user')->name('user');// user
-	Route::resource('influencers', 'influencerController');
+// 	Route::get('/home', 'UserController@user')->name('user');// user
+// 	Route::resource('influencers', 'influencerController');
 
-	Route::Group(['middleware' => ['admin']], function() {
-		Route::get('/admin', 'UserController@admin')->name('admin'); // admin
-		});
-});
+// 	Route::Group(['middleware' => ['admin']], function() {
+// 		Route::get('/admin', 'UserController@admin')->name('admin'); // admin
+// 		});
+// });
 
 
 Auth::routes();

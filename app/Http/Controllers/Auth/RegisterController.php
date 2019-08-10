@@ -53,7 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'choice' => ['required'],
+            'choice' => ['required', 'string'],
         ]);
     }
 
@@ -72,7 +72,8 @@ class RegisterController extends Controller
           'choice'   => $data['choice'],
         ]);
 
-        $user->roles()->attach(Role::where('name', 'employee')->first());
+        // $user->roles()->attach(Role::where('name', 'employee')->first());
+        $user->assignRole($data['role']);
         toastr()->success('Gebruiker succesvol aangemaakt');
         return $user;
     }
