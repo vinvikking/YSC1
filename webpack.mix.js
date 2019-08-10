@@ -12,4 +12,5 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+	.copy('node_modules/flag-icon-css', 'public/css/flag-icon-css')
     .sass('resources/sass/app.scss', 'public/css');

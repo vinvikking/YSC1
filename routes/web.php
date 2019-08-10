@@ -43,8 +43,9 @@ Route::resource('/user', 'UserController');
 Route::resource('analytics', 'AnalyticsController');
 
 //Home routing
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 //Language routing
-Route::get(‘locales/{lang}’, ‘Locale@index’);
+Route::get('home', 'HomeController@index')->name('home');
+Route::get('lang/{locale}', 'HomeController@lang');
 

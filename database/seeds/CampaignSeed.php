@@ -35,5 +35,6 @@ class CampaignSeed extends Seeder
     $campaign3->description = 'Op reis naar Afrika!';
     $campaign3->image = '0';
     $campaign3->save();
+
     }
 }

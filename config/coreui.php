@@ -21,13 +21,13 @@ return [
          [
             'permission' => 'see leerlingen',
             'text' => 'Influencer',
-            'url'  => '/Influencer',
+            'url'  => '/Influencer/',
             'icon' => 'users fas',
             'submenu' => [
                 [
                     'text' => 'Alle campagnes',
                     'icon' => 'calendar-alt far',
-                    'url'  => '/campaign/list',    
+                    'url'  => '/campaign/list/',    
                 ],
                 [
                     'text' => 'Actieve campagnes',

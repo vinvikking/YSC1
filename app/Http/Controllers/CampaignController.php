@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App;
+
 use App\Campaign;
 use Illuminate\Http\Request;
 
@@ -14,9 +16,7 @@ class CampaignController extends Controller
      */
     public function index()
     {
-
-
-
+        
         $campagnes = Campaign::all();
         // $s = auth()->user()
        return view('campagnes.index', compact('campagnes'));

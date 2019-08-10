@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,6 +10,7 @@
     <!-- CoreUI CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/coreui/fontawesome/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flag-icon-css/css/flag-icon.css') }}">
     <!-- Custom CSS -->
     @stack('css')
     {{-- Toastr --}}
@@ -18,7 +20,9 @@
 </head>
 <body class="app header-fixed sidebar-fixed sidebar-lg-show">
 <header class="app-header navbar">
+
     <div class="container-fluid">
+
         <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,24 +33,50 @@
         <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
             <span class="navbar-toggler-icon"></span>
         </button>
+           
+
         <ul class="nav ml-auto">
+            @php $locale = session()->get('locale'); @endphp
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">  {{ trans('profile.language')}}
+                @switch($locale)
+                                @case('de')
+                                <span class="flag-icon flag-icon-de"></span>
+                                @break
+                                @case('nl')
+                                <span class="flag-icon flag-icon-nl"></span>
+                                @break
+                                @case('be')
+                                <span class="flag-icon flag-icon-be"></span>
+                                @break
+                                @default
+                                <span class="flag-icon flag-icon-gb"></span>
+                            @endswitch
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/lang/nl"><span class="flag-icon flag-icon-nl"></span> NL</a>
+                    <a class="dropdown-item" href="/lang/en"><span class="flag-icon flag-icon-gb"></span> EN</a>
+                </div>
+            </li>
+
             <li class="nav-item dropdown">
                 @if (\Illuminate\Support\Facades\Auth::user() !== null)
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                        aria-expanded="false">
                         <i class="fa fa-user-cog"></i> {{ \Illuminate\Support\Facades\Auth::user()->name }}
                     </a>
+
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-header text-center">
                             <strong>{{ __('coreui::coreui.settings') }}</strong>
                         </div>
                         @if(Auth::user()->choice == "1")
                         <div class="dropdown-item text-center">
-                           <p>Hallo Influencer</p>
+                           <p>@lang('profile.welcomeInfluencer') Influencer</p>
                         </div>
                         @else
                         <div class="dropdown-item text-center">
-                            <p>Welkom Opdrachtgever</p>
+                            <p>@lang('profile.welcomeBusiness') Opdrachtgever</p>
                         </div>
                         @endif
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -66,6 +96,8 @@
                     </div>
                 @endif
             </li>
+
+
         </ul>
     </div>
 </header>

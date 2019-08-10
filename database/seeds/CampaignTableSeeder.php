@@ -39,6 +39,30 @@ class CampaignTableSeeder extends Seeder
     $campaign3->image = '0';
     $campaign3->save();
 
+        $campaign4 = new Campaign();
+    $campaign4->id = '4';
+    $campaign4->user_id = '4';
+    $campaign4->title = 'Mode campagne';
+    $campaign4->description = 'Voor ons merk Mango!';
+    $campaign4->image = '0';
+    $campaign4->save();
+
+    $campaign5 = new Campaign();
+    $campaign5->id = '5';
+    $campaign5->user_id = '5';
+    $campaign5->title = 'Promotie restaurant Zillertal';
+    $campaign5->description = 'Witte sneeuw in het restaurant!';
+    $campaign5->image = '0';
+    $campaign5->save();
+
+    $campaign6 = new Campaign();
+    $campaign6->id = '6';
+    $campaign6->user_id = '6';
+    $campaign6->title = 'Suppen in het kanaal';
+    $campaign6->description = 'Promoot ons sup-bedrijf!';
+    $campaign6->image = '0';
+    $campaign6->save();
+
 
     }
 }
