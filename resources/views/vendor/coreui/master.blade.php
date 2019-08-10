@@ -42,13 +42,20 @@
                         </div>
                         @if(Auth::user()->choice == "1")
                         <div class="dropdown-item text-center">
-                           <p>Welkom Influencer</p>
+                           <p>Hallo Influencer</p>
                         </div>
                         @else
                         <div class="dropdown-item text-center">
                             <p>Welkom Opdrachtgever</p>
                         </div>
                         @endif
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.url_profilepage') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
+                            @csrf
+                        </form>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.log_out') }}
@@ -82,12 +89,12 @@
 </div>
 <footer class="app-footer">
     <div>
-        <span>&copy; {{ \Carbon\Carbon::now()->year }} HZ University of Applied Sciences</span>
+        <span>&copy; {{ \Carbon\Carbon::now()->year }} Your Social Connect</span>
     </div>
-    <div class="ml-auto">
+<!--     <div class="ml-auto">
         <span>Powered by </span><a target="_blank" href="https://coreui.io">CoreUI</a>,
         <span>inspired by </span><a target="_blank" href="https://github.com/jeroennoten/Laravel-AdminLTE">Laravel-AdminLTE</a>
-    </div>
+    </div> -->
 </footer>
 
 @if(Session::has('success'));

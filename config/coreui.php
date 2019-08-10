@@ -20,15 +20,129 @@ return [
     'menu' => [
          [
             'permission' => 'see leerlingen',
-            'text' => 'Campagnes',
-            'url'  => '/campagnes',
-            'icon' => 'bell far',
+            'text' => 'Influencer',
+            'url'  => '/Influencer',
+            'icon' => 'users fas',
+            'submenu' => [
+                [
+                    'text' => 'Alle campagnes',
+                    'icon' => 'calendar-alt far',
+                    'url'  => '/campaign/list',    
+                ],
+                [
+                    'text' => 'Actieve campagnes',
+                    'icon' => 'star far',
+                    'url'  => '/campaign/active',    
+                ],
+                [
+                    'text' => 'Statistieken',
+                    'icon' => 'chart-line fas',
+                    'url'  => '/influencer/statistics',    
+                ]
+            ]
+         ],
+         [
+            'permission' => 'see leerlingen',
+            'text' => 'Business',
+            'url'  => '/Business',
+            'icon' => 'user-tie fas',
+            'submenu' => [
+                [
+                    'text' => 'Alle campagnes',
+                    'icon' => 'calendar-alt far',
+                    'url'  => '/campagnes',    
+                ],
+                [
+                    'text' => 'Actieve campagnes',
+                    'icon' => 'star far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Lijst Influencers',
+                    'icon' => 'list fas',
+                    'url'  => '/influencers',    
+                ],
+                     [
+                    'text' => 'Statistieken',
+                    'icon' => 'chart-line fas',
+                    'url'  => '#',    
+                ]
+            ]
+         ],
+         [
+            'permission' => 'see leerlingen',
+            'text' => 'Business Analytics',
+            'url'  => '/analytics',
+            'icon' => 'eye far',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'icon' => 'bell far',
+                    'url'  => '/analytics',    
+                ],
+                                [
+                    'text' => 'Reporting',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Export wizard',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ]
+            ]
+         ],
+                  [
+            'permission' => 'see leerlingen',
+            'text' => 'Abonnement',
+            'url'  => '/subscription',
+            'icon' => 'wallet fas',
+            'submenu' => [
+                [
+                    'text' => 'Overzicht',
+                    'icon' => 'file-invoice fas',
+                    'url'  => '/subscription/list',    
+                ],
+                                [
+                    'text' => 'Beheren',
+                    'icon' => 'cogs fas',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Feedback',
+                    'icon' => 'comment-dots fas',
+                    'url'  => '#',    
+                ]
+            ]
          ],
          [
             'text' => 'Admin',
             'url'  => '/admin',
             'icon' => 'person far',
+            'submenu' => [
+                [
+                    'text' => 'Dashboard',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                                [
+                    'text' => 'Abonnementen',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Beheer Subscribers',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Extra',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+            ]
          ]
+
 //        [
 //            'text' => 'Dashboard',          // The text to be displayed inside the menu.
 //            'url' => 'admin/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Influencer;
+use App\User;
 use Illuminate\Http\Request;
 
 class InfluencerController extends Controller
@@ -15,8 +16,9 @@ class InfluencerController extends Controller
     public function index()
     {
         //$influencers = influencer::all();
-        return view('influencers.index');
-        toastr()->info('Are you the 6 fingered man?');
+        $influencers = User::all();
+        // $s = auth()->user()
+       return view('influencers.index', compact('influencers'));
     }
 
     /**
@@ -49,6 +51,7 @@ class InfluencerController extends Controller
     public function show(Influencer $influencer)
     {
         //
+        return view('influencers.show', compact('influencers'));
     }
 
     /**
@@ -83,5 +86,29 @@ class InfluencerController extends Controller
     public function destroy(Influencer $influencer)
     {
         //
+    }
+
+    
+    public function search(Request $request) {
+        $search = htmlspecialchars($request->get('q'));
+        $term = strtolower($request->get('term'));
+
+        switch ($term) {
+            // TODO: No longer search on ID.
+            case "naam":
+                $influencers = User::query()->where('name', 'like', "%$search%")->get();
+                break;
+
+            case "email":
+                $influencers = User::query()->where('email', 'like', "%$search%")->get();
+                break;
+
+            default:
+                toastError("'$term' is geen geldige zoekterm.");
+
+                return redirect()->to(route('influencers.index'));
+        }
+
+        return view('influencers.index', compact('influencers', 'search', 'term'));
     }
 }
