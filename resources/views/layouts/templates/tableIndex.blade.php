@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-outline-danger  my-sm-0 font-weight-bold" href=""><i class="fas fa-times mr-2"></i>Reset zoeken</a>
+                    <a class="btn btn-outline-danger  my-sm-0 font-weight-bold" href="{{route($url . '.index')}}"><i class="fas fa-times mr-2"></i>Reset zoeken</a>
                 </form>
             </div>
             <div class="text-muted"><b>{{$results->count() == 1 ? $results->count() . ' resultaat' : $results->count() . ' resultaten'}}</b></div>

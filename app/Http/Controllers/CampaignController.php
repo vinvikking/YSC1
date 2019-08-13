@@ -50,9 +50,9 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function show(Campagne $campagne)
+    public function show(Campaign $campagne)
     {
-        return view('campagnes.show', compact('campagnes'));
+        return view('campagnes.show', compact('campagne'));
     }
 
     /**
@@ -61,9 +61,9 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function edit(Campagne $campagne)
+    public function edit(Campaign $campagne)
     {
-        return view('campagnes.edit', compact('campagnes'));
+        return view('campagnes.edit', compact('campagne'));
     }
 
     /**
@@ -73,7 +73,7 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Campagne $campagne)
+    public function update(Request $request, Campaign $campagne)
     {
         //
     }
@@ -84,7 +84,7 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Campagne $campagne)
+    public function destroy(Campaign $campagne)
     {
         //
     }
