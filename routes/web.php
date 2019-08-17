@@ -45,6 +45,6 @@ Route::resource('analytics', 'AnalyticsController');
 //Home routing
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Language routing
-Route::get(‘locales/{lang}’, ‘Locale@index’);
+// //Language routing
+// Route::get(‘locales/{lang}’, ‘Locale@index’);
 
