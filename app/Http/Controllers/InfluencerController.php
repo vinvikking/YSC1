@@ -48,10 +48,10 @@ class InfluencerController extends Controller
      * @param  \App\Influencer  $influencer
      * @return \Illuminate\Http\Response
      */
-    public function show(Influencer $influencer)
+    public function show(User $influencer)
     {
         //
-        return view('influencers.show', compact('influencers'));
+        return view('influencers.show', compact('influencer'));
     }
 
     /**
@@ -96,11 +96,11 @@ class InfluencerController extends Controller
         switch ($term) {
             // TODO: No longer search on ID.
             case "naam":
-                $influencers = User::query()->where('name', 'like', "%$search%")->get();
+                $influencer = User::query()->where('name', 'like', "%$search%")->get();
                 break;
 
             case "email":
-                $influencers = User::query()->where('email', 'like', "%$search%")->get();
+                $influencer = User::query()->where('email', 'like', "%$search%")->get();
                 break;
 
             default:

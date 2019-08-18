@@ -13,7 +13,7 @@
             'url' => 'campagnes',
             'results' => $campagnes,
             'terms' => ['campagne', 'omschrijving'],
-            'columns' => ['id', 'Campagne', 'Omschrijving'],
+            'columns' => ['#', 'Campagne', 'Omschrijving'],
         ]
     ])
     @foreach ($campagnes as $campagne)

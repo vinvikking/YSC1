@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+
+use App;
+
 use App\Role;
 use App\User;
 
@@ -27,16 +30,22 @@ class HomeController extends Controller
     public function index(request $request)
     {
        // $t = $request->user()->authorizeRoles(['employee', 'manager']);
-    
-       // return view('home');
-        return view("/home");
+        //, $lang
+       // return view('home');   
+        return view('home');
     }
 
-
+    public function lang($locale)
+    {
+        App::setLocale($locale);
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 
     public function someAdminStuff(Request $request)
       {
         $request->user()->authorizeRoles('manager');
         return view(‘some.view’);
       }
+
 }

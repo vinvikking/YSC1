@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
-use App\Role;
 
 class UserTableSeeder extends Seeder
 {
@@ -14,31 +13,26 @@ class UserTableSeeder extends Seeder
     public function run()
     {
     
-
-    $role_influencer = Role::where('name', 'Influencer')->first();
-    $role_company  = Role::where('name', 'Company')->first();
-    $role_admin  = Role::where('name', 'Admin')->first();
-
     $influencer = new User();
     $influencer->name = 'Default Influencer Name';
     $influencer->email = 'employee@example.com';
     $influencer->choice = 1; // Influencer
     $influencer->password = bcrypt('secret');
     $influencer->save();
-    $influencer->roles()->attach($role_influencer);
+    $influencer->assignRole('influencer');
 
 
     $company = new User();
-    $company->name = 'Default Company Name';
-    $company->email = 'company@example.com';
+    $company->name = 'Default Business Name';
+    $company->email = 'Business@example.com';
     $company->choice = 2; // Company User
     $company->password = bcrypt('secret');
     $company->save();
+    $company->assignRole('Business');
 
-    $company->roles()->attach($role_company);
 
 
-    // Vincent + Derek 
+    // Superadmin Users
 
     $Vincent = new User();
     $Vincent->name = 'Vincent Roeland';
@@ -46,8 +40,9 @@ class UserTableSeeder extends Seeder
     $Vincent->choice = 2; // Company User
     $Vincent->password = bcrypt('secret');
     $Vincent->save();
+    $Vincent->assignRole('superadmin');
 
-    $Vincent->roles()->attach($role_admin);
+    // $Vincent->roles()->attach($role_admin);
 
     $derek = new User();
     $derek->name = 'Derek de Witte';
@@ -55,8 +50,9 @@ class UserTableSeeder extends Seeder
     $derek->choice = 2; // Company User
     $derek->password = bcrypt('secret');
     $derek->save();
+    $derek->assignRole('superadmin');
 
-    $derek->roles()->attach($role_admin);
+    // $derek->roles()->attach($role_admin);
 
 
     }
