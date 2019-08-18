@@ -19,11 +19,16 @@ return [
      */
     'menu' => [
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see influencer',
             'text' => 'Influencer',
             'url'  => '/Influencer/',
             'icon' => 'users fas',
             'submenu' => [
+                 [
+                    'text' => 'Alle influencer',
+                    'icon' => 'calendar-alt far',
+                    'url'  => '/influencers',    
+                ],
                 [
                     'text' => 'Alle campagnes',
                     'icon' => 'calendar-alt far',
@@ -42,7 +47,7 @@ return [
             ]
          ],
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Business',
             'text' => 'Business',
             'url'  => '/Business',
             'icon' => 'user-tie fas',
@@ -70,7 +75,7 @@ return [
             ]
          ],
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Business Analytics',
             'text' => 'Business Analytics',
             'url'  => '/analytics',
             'icon' => 'eye far',
@@ -93,7 +98,7 @@ return [
             ]
          ],
                   [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Abbonement',
             'text' => 'Abonnement',
             'url'  => '/subscription',
             'icon' => 'wallet fas',

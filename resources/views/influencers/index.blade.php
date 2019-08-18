@@ -12,8 +12,8 @@
         'data' => (object) [
             'url' => 'influencers',
             'results' => $influencers,
-            'terms' => ['naam', 'email'],
-            'columns' => ['id', 'Naam', 'Email'],
+            'terms' => ['voornaam', 'email'],
+            'columns' => ['id', 'voornaam', 'Email'],
         ]
     ])
     @foreach ($influencers as $influencer)
@@ -26,10 +26,10 @@
             @else
                 <th>{{$influencer->id}}</th>
             @endif
-            @if (!empty($search) && !empty($term) && $term=="name")
-                <th>{!!$influencer->name = str_ireplace($search, "<mark><u>$search</u></mark>", $influencer->name)!!}</th>
+            @if (!empty($search) && !empty($term) && $term=="voornaam")
+                <th>{!!$influencer->voornaam = str_ireplace($search, "<mark><u>$search</u></mark>", $influencer->voornaam)!!}</th>
             @else
-                <th>{{$influencer->name}}</th>
+                <th>{{$influencer->voornaam}}</th>
             @endif
             {{-- Voornaam --}}
             @if (!empty($search) && !empty($term) && $term=="email")

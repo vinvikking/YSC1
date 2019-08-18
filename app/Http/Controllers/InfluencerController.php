@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Influencer;
-use App\User;
 use Illuminate\Http\Request;
 
 class InfluencerController extends Controller
@@ -13,10 +12,20 @@ class InfluencerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see Influencer', ['only' => 'index']);
+        $this->middleware('canAny:create Influencer', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update Influencer', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy Influencer', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         //$influencers = influencer::all();
-        $influencers = User::all();
+        $influencers = Influencer::all();
         // $s = auth()->user()
        return view('influencers.index', compact('influencers'));
     }

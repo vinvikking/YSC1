@@ -69,11 +69,7 @@ class RolesAndPermissionsSeeder extends Seeder
             'description' => "Gebruiker kan admin pagina openen"
         ]);
 
-  
-
-
-
-
+ 
 
         foreach ($crudList as $crud) {
             Permission::create([
