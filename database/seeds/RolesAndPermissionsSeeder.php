@@ -17,10 +17,11 @@ class RolesAndPermissionsSeeder extends Seeder
         $crudList = [
             'users',
             'roles',
-            'influencer',
-            'business',
-            'influencer promo',
-            'business promo'
+            'Influencer',
+            'Influencer Promo ',
+            'Business',
+            'Campaign',
+            'Business Analytics'
         ];
 
         // Reset cached roles and permissions
@@ -44,7 +45,6 @@ class RolesAndPermissionsSeeder extends Seeder
 
         $default = Role::create([
             'name' => 'default'
-            // 'guard_name' => 'web'
         ]);
 
 
@@ -69,57 +69,53 @@ class RolesAndPermissionsSeeder extends Seeder
             'description' => "Gebruiker kan admin pagina openen"
         ]);
 
-        Permission::create([
-            'name' => 'create report',
-            'group' => 'auth',
-            'description' => 'Gebruiker kan rapporten maken en downloaden'
-        ]);
+  
 
 
 
 
 
-        // foreach ($crudList as $crud) {
-        //     Permission::create([
-        //         'name' => 'see ' . $crud,
-        //         'group' => $crud,
-        //         'description' => "Gebruiker kan de index pagina openen van $crud"
-        //     ]);
+        foreach ($crudList as $crud) {
+            Permission::create([
+                'name' => 'see ' . $crud,
+                'group' => $crud,
+                'description' => "Gebruiker kan de index pagina openen van $crud"
+            ]);
 
-        //     Permission::create([
-        //         'name' => 'create ' . $crud,
-        //         'group' => $crud,
-        //         'description' => "Gebruiker kan nieuwe $crud aanmaken"
-        //     ]);
+            Permission::create([
+                'name' => 'create ' . $crud,
+                'group' => $crud,
+                'description' => "Gebruiker kan nieuwe $crud aanmaken"
+            ]);
 
-        //     Permission::create([
-        //         'name' => 'update ' . $crud,
-        //         'group' => $crud,
-        //         'description' => "Gebruiker kan $crud updaten"
-        //     ]);
+            Permission::create([
+                'name' => 'update ' . $crud,
+                'group' => $crud,
+                'description' => "Gebruiker kan $crud updaten"
+            ]);
 
-        //     Permission::create([
-        //         'name' => 'destroy ' . $crud,
-        //         'group' => $crud,
-        //         'description' => "Gebruiker kan $crud verwijderen"
-        //     ]);
-        // }
+            Permission::create([
+                'name' => 'destroy ' . $crud,
+                'group' => $crud,
+                'description' => "Gebruiker kan $crud verwijderen"
+            ]);
+        }
 
         // Assign Permissions to role
         foreach (Permission::all() as $perm) {
             $superadmin->givePermissionTo($perm->name);
         }
 
-        // $Business->givePermissionTo('see leerlingen');
-        // $Influencer->givePermissionTo('see ouders');
-        // $default->givePermissionTo('access adminpage');
+        $Business->givePermissionTo('see Business');
+        $Influencer->givePermissionTo('see Influencer');
+        $default->givePermissionTo('access adminpage');
 
         //Give all users a role
-        // $users = User::all();
+        $users = User::all();
 
-        // foreach ($users as $user) {
-        //     $user->assignRole('Business');
-        // }
+        foreach ($users as $user) {
+            $user->assignRole('Influencer');
+        }
  
 
         // $users->random()
