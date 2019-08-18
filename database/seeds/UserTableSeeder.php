@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Influencer;
 
 class UserTableSeeder extends Seeder
 {
@@ -13,11 +14,38 @@ class UserTableSeeder extends Seeder
     public function run()
     {
     
+
+        $influencers = Influencer::query()->create([
+            'voornaam' => 'Vincent',
+            'achternaam' => 'Roeland',
+            'volgers' => 500,
+            'instagram_name' => 'VincentRoeland',
+            'leeftijd' => 22,
+            'telefoonnummer' => "0612345678",
+            'email'=> 'Vincent@laravel.test'
+        ]);
+
+
+        $user = User::query()->create([
+            'name' => 'Beheerder',
+            'email' => 'ysc@admin.test',
+            'email_verified_at' => now(),
+            'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+            'imageable_id' => $influencers->id,
+            'imageable_type' => 'App\Business',
+        ]);
+
+
+
+
+
+
     $influencer = new User();
     $influencer->name = 'Default Influencer Name';
     $influencer->email = 'employee@example.com';
-    // $influencer->choice = 1; // Influencer
     $influencer->password = bcrypt('secret');
+    $influencer->imageable_id = 1;
+    $influencer->imageable_type = 'App\Influencer';
     $influencer->save();
     $influencer->assignRole('Influencer');
 
@@ -25,8 +53,9 @@ class UserTableSeeder extends Seeder
     $company = new User();
     $company->name = 'Default Business Name';
     $company->email = 'Business@example.com';
-    // $company->choice = 2; // Business User
     $company->password = bcrypt('secret');
+    $company->imageable_id = 2;
+    $company->imageable_type = 'App\Business';
     $company->save();
     $company->assignRole('Business');
 
@@ -37,8 +66,9 @@ class UserTableSeeder extends Seeder
     $Vincent = new User();
     $Vincent->name = 'Vincent Roeland';
     $Vincent->email = 'vincentroeland@laravel.com';
-    // $Vincent->choice = 2; // Company User
     $Vincent->password = bcrypt('secret');
+    $Vincent->imageable_id = 3;
+    $Vincent->imageable_type = 'App\Business';
     $Vincent->save();
     $Vincent->assignRole('superadmin');
 
@@ -46,8 +76,9 @@ class UserTableSeeder extends Seeder
     $derek = new User();
     $derek->name = 'Derek de Witte';
     $derek->email = 'derek@laravel.com';
-    // $derek->choice = 2; // Company User
     $derek->password = bcrypt('secret');
+    $derek->imageable_id = 4;
+    $derek->imageable_type = 'App\Business';
     $derek->save();
     $derek->assignRole('superadmin');
 

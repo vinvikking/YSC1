@@ -15,10 +15,13 @@ class Influencers extends Migration
     {
         Schema::create('influencers', function (Blueprint $table) {
             $table->Increments('id');
-            $table->unsignedInteger('user_id');
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->string('image');
+            $table->string('voornaam');
+            $table->string('achternaam');
+            $table->text('instagram_name');
+            $table->integer('leeftijd');
+            $table->string('telefoonnummer');
+            $table->string('email');
+            $table->integer('volgers');
             $table->timestamps();
         });
     }

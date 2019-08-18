@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Campaign;
-use App\Role;
+use App\Influencer;
+use App\Business;
 use App\User;
 
 
@@ -16,9 +17,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        factory(Influencer::class, 5)->create();
+        // factory(Business::class, 5)->create();
+        factory(User::class, 10)->create();
+        
 
-        factory(User::class, 5)->create();
-        // $this->call(UsersTableSeeder::class);
         $this->call(CampaignTableSeeder::class);
         $this->call(RolesAndPermissionsSeeder::class);
         $this->call(UserTableSeeder::class);
