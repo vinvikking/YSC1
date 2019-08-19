@@ -70,7 +70,7 @@ class UserTableSeeder extends Seeder
     $Vincent->imageable_id = 3;
     $Vincent->imageable_type = 'App\Business';
     $Vincent->save();
-    $Vincent->assignRole('Business');
+    $Vincent->assignRole('superadmin');
 
 
     $derek = new User();
