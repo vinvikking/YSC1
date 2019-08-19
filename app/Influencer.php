@@ -16,4 +16,9 @@ class Influencer extends Model
         'volgers',
         'email'
     ];
+
+
+    public function user() {
+        return $this->morphOne(User::class, 'imageable');
+    }
 }
