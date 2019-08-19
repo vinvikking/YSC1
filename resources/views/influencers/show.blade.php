@@ -1,7 +1,6 @@
 
 @extends('layouts.templates.edit')
-
-@section('page_title', {{trans('influencers.HeadShowPage')}})
+@section('page_title', trans('influencers.HeadShowPage'))
 
 @section('breadcrumb')
     <ol class='breadcrumb'>
@@ -19,7 +18,7 @@
             {{--Column 1--}}
             <div class="d-flex flex-fill flex-column">
                 <div class="pr-2">
-                    <label for="voornaam">Titel&nbsp;</label>
+                    <label for="voornaam">Naam&nbsp;</label>
                     <input type="text" id="voornaam" class="form-control mb-2" name="titel" placeholder="{{$influencer->name}}" tabindex="1" required>
                 </div>
             </div>

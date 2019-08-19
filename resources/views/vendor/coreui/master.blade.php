@@ -79,9 +79,9 @@
                             <p>@lang('profile.welcomeBusiness') Opdrachtgever</p>
                         </div>
                         @endif
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.url_profilepage') }}
+                        <a class="dropdown-item" href="{{route('influencers.edit', Auth::user()->id)}}"
+                           onclick="">
+                            Profielpagina
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                             @csrf
