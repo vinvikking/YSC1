@@ -70,19 +70,14 @@
                         <div class="dropdown-header text-center">
                             <strong>{{ __('coreui::coreui.settings') }}</strong>
                         </div>
-                        @if(Auth::user()->choice == "1")
-                        <div class="dropdown-item text-center">
-                           <p>@lang('profile.welcomeInfluencer') Influencer</p>
-                        </div>
-                        @else
-                        <div class="dropdown-item text-center">
-                            <p>@lang('profile.welcomeBusiness') Opdrachtgever</p>
-                        </div>
-                        @endif
-                        <a class="dropdown-item" href="{{route('influencers.edit', Auth::user()->id)}}"
-                           onclick="">
-                            Profielpagina
+
+
+                        <a class="dropdown-item" href="{{ route('user.edit', Auth::user()->id) }}"
+                        >
+                            <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.url_profilepage') }}
                         </a>
+
+
                         <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                             @csrf
                         </form>
