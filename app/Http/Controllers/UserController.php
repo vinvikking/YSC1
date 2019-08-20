@@ -14,7 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        //        //$influencers = influencer::all();
+        $users = User::all();
+        // $s = auth()->user()
+       return view('user.index', compact('user'));
     }
 
     /**
