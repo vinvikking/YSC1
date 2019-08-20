@@ -71,14 +71,8 @@
                             <strong>{{ __('coreui::coreui.settings') }}</strong>
                         </div>
 
-<<<<<<< HEAD
 
-                        <a class="dropdown-item" href="{{ route('user.edit', Auth::user()->id) }}"
-                        >
-=======
-                        <a class="dropdown-item" href="{{ route('user.show', Auth::user()->id) }}"
-                        ;">
->>>>>>> a7ebb8eb790c77b8a7796d69e3b2bb95bd827585
+                        <a class="dropdown-item" href="{{ route('user.show', Auth::user()->id) }}">
                             <i class="fas fa-sign-out-alt"></i>{{ __('coreui::coreui.url_profilepage') }}
                         </a>
 
