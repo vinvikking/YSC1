@@ -27,4 +27,6 @@
         <button class="btn btn-success mt-3 mb-3 mr-2 float-right" type="submit">Veranderingen opslaan</button>
         <a class="btn btn-danger mt-3 mb-3 mr-2 float-right" href="{{route('user.show', $user->id)}}">Annuleren</a>
     </form>
+
 @endsection
+

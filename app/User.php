@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'choice',
+        'name', 'email', 'password', 'choice','imageable_id' , 'imageable_type',
     ];
 
     /**
@@ -42,6 +42,11 @@ class User extends Authenticatable
    public function imageable()
     {
         return $this->morphTo();
+    }
+
+    public function influencer()
+    {
+        return $this->hasOne(Influencer::class,'user_id');
     }
 
 }
