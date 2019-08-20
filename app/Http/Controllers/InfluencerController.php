@@ -62,7 +62,8 @@ class InfluencerController extends Controller
     public function show(User $influencer)
     {
         //
-        return view('influencers.show', compact('influencer'));
+        $user = Auth::user();
+        return view('influencers.show', compact('influencer', 'user'));
     }
 
     /**

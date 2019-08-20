@@ -21,4 +21,8 @@ class Influencer extends Model
     public function user() {
         return $this->morphOne(User::class, 'imageable');
     }
+
+
+    
+
 }

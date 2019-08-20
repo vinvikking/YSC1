@@ -24,12 +24,12 @@ $factory->define(User::class, function (Faker $faker) {
 	$imageable_type = $faker->randomElement(['App\Influencer']);
 
 	
-    if ($imageable_type == 'App\Influencer') {
-        $imageable_id = Influencer::query()->inRandomOrder()->get('id')->first();
-    }
-    elseif ($imageable_type == 'App\Business') {
-        $imageable_id = Business::query()->inRandomOrder()->get('id')->first();
-    }
+    // if ($imageable_type == 'App\Influencer') {
+    //     $imageable_id = Influencer::query()->inRandomOrder()->get('id')->first();
+    // }
+    // elseif ($imageable_type == 'App\Business') {
+    //     $imageable_id = Business::query()->inRandomOrder()->get('id')->first();
+    // }
 
 
     return [
@@ -38,7 +38,7 @@ $factory->define(User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => bcrypt('secret'), // password
         'remember_token' => Str::random(10),
-        'imageable_id' =>  $imageable_id,
+        // 'imageable_id' =>  $imageable_id,
         'imageable_type' => $imageable_type,
     ];
 });

@@ -16,6 +16,7 @@ class Influencers extends Migration
         Schema::create('influencers', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('voornaam');
+            $table->unsignedInteger('user_id');
             $table->string('achternaam');
             $table->text('instagram_name');
             $table->integer('leeftijd');
@@ -23,6 +24,9 @@ class Influencers extends Migration
             $table->string('email');
             $table->integer('volgers');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 

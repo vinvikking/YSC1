@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\influencer;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -49,7 +51,10 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('user.show', compact('user'));
+        
+        //$influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
+        // dd($influencer);
+        return view('user.show', compact('user', 'influencer'));
     }
 
     /**
@@ -86,13 +91,4 @@ class UserController extends Controller
         //
     }
 
-
-
-    public function admin(){
-        return view('admin.admin');
-    }
-
-    public function user(){
-        return view('admin.blade.php');
-    }
 }
