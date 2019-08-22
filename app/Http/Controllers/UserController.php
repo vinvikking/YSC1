@@ -17,9 +17,9 @@ class UserController extends Controller
     public function index()
     {
         //        //$influencers = influencer::all();
-        $users = User::all();
-        // $s = auth()->user()
-       return view('user.index', compact('user'));
+       //  $users = User::all();
+       //  // $s = auth()->user()
+       // return view('user.index', compact('user'));
     }
 
     /**
@@ -49,12 +49,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user, Influencer $influencer)
+    public function show(User $user)
     {
         
         //$influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
         //dd($influencer);
-        return view('user.show', compact('user', 'influencer'));
+        return view('user.show', compact('user','influencer'));
     }
 
     /**
@@ -65,6 +65,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+
         return view('user.edit', compact('user'));
     }
 
