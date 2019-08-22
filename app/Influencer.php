@@ -18,11 +18,12 @@ class Influencer extends Model
     ];
 
 
-    public function user() {
+    public function user1() {
         return $this->morphOne(User::class, 'imageable');
     }
 
 
-    
-
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 }

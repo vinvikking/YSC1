@@ -15,7 +15,7 @@ class RolesAndPermissionsSeeder extends Seeder
     public function run()
     {
         $crudList = [
-            'users',
+            'user',
             'roles',
             'Influencer',
             'Influencer Promo ',

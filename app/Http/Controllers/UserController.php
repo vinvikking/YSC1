@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\influencer;
+use App\Influencer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -14,6 +14,17 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see user', ['only' => 'index']);
+        $this->middleware('canAny:create user', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update user', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy user', ['only' => ['destroy']]);
+    }
+
+
     public function index()
     {
         //
@@ -49,7 +60,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         
-        //$influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
+        // $influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
         // dd($influencer);
         return view('user.show', compact('user', 'influencer'));
     }
