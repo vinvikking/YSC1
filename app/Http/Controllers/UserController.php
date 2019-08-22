@@ -57,11 +57,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $user, Influencer $influencer)
     {
         
         // $influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
-        // dd($influencer);
+        $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
         return view('user.show', compact('user', 'influencer'));
     }
 
