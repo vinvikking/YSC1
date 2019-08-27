@@ -15,7 +15,7 @@
                 <img class="card-img-top" src="{{ asset('images/pexels-photo-122383.jpeg') }}" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">You can also use headers like this image!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Chat Influencers</a>
                 </div>
                 <div class="card-footer">
                     Cards can even have footers
@@ -27,7 +27,7 @@
                 <img class="card-img-top" src="{{ asset('images/instagram-social-media-web-pages-internet-163141.jpeg') }}" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">You can also use headers like this image!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Chat Influencers & Business</a>
                 </div>
                 <div class="card-footer">
                     Cards can even have footers
@@ -39,7 +39,7 @@
                 <img class="card-img-top" src="{{ asset('images/pexels-photo-389734.jpeg') }}" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">You can also use headers like this image!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Chat Business</a>
                 </div>
                 <div class="card-footer">
                     Cards can even have footers
