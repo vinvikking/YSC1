@@ -57,7 +57,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user, Influencer $influencer)
+    public function show(User $user)
     {
         
         // $influencer = Influencer::all()->get(Auth::user()->imageable_id - 1);
@@ -73,7 +73,40 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('user.edit', compact('user'));
+        // $t = Influencer::where('user_id', '=' ,Auth::id()); 
+        // $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
+
+        // if ($user->id === ) {
+        //     return view('user.edit', compact('user'));
+        // }
+
+        // // Check if user is the post author
+        // if ($user->id === $post->author_id) {
+        //     return true;
+        // }
+        $this->authorize('edit', auth()->user());
+        return view('user.edit', compact('user')); 
+        
+        // $user1 = User::with('influencer')->get();
+
+        // dd($user->id);
+        // $t = Influencer::get()->where('user_id', '=' ,Auth::id());
+
+        // $t = Influencer::get()->where('user_id', '===' ,Auth::id());
+        // dd($t);
+        // dd(auth::id());
+
+        // if(Auth::id() === $t->user_id){
+        //         return view('user.edit', compact('user'));      
+        //     }
+        // else{
+        //         toastr()->error('U heeft geen toegang om deze gebruiker te wijzigen');
+        //         return abort('403'); // deny
+        //     }
+
+        
+        //dd(Auth::id() == Influencer::id('user_id'));
+        
     }
 
     /**

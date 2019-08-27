@@ -16,4 +16,9 @@ class Business extends Model
         'volgers',
         'email'
     ];
+
+
+    public function campaign() {
+       return $this->hasMany(Campaign::class, 'business_id');
+    }
 }

@@ -65,8 +65,6 @@ class UserTableSeeder extends Seeder
 
         ## Default Influencer ## 
 
-
-
             $User1 = new User();
             $User1->name = 'Default Influencer Name';
             $User1->email = 'employee@example.com';
@@ -90,17 +88,6 @@ class UserTableSeeder extends Seeder
 
 
 
-
-
-
-            // $company = new User();
-            // $company->name = 'Default Business Name';
-            // $company->email = 'Business@example.com';
-            // $company->password = bcrypt('secret');
-            // $company->imageable_id = 2;
-            // $company->imageable_type = 'App\Business';
-            // $company->save();
-            // $company->assignRole('Business');
 
 
 

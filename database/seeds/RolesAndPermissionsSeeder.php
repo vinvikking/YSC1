@@ -52,9 +52,9 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Create Permissions
         Permission::create([
-            'name' => 'register users',
+            'name' => 'edit user',
             'group' => 'auth',
-            'description' => "Gebruiker kan nieuwe gebruikers aanmaken"
+            'description' => "Gebruiker kan eigen profiel wijzigen"
         ]);
 
         Permission::create([
@@ -103,7 +103,7 @@ class RolesAndPermissionsSeeder extends Seeder
         }
 
         $Business->givePermissionTo('see Business');
-        $Influencer->givePermissionTo('see Influencer');
+        $Influencer->givePermissionTo('see Influencer', 'edit user');
         $default->givePermissionTo('access adminpage');
 
         //Give all users a role
