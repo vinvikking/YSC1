@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
         // factory(Business::class, 5)->create();
         
 
-        $this->call(CampaignTableSeeder::class);
         $this->call(RolesAndPermissionsSeeder::class);
+        $this->call(CampaignTableSeeder::class);
         $this->call(UserTableSeeder::class);
     }
 }
