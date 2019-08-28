@@ -8,6 +8,7 @@ class Influencer extends Model
 {
     protected $table = 'influencers';
     protected $fillable = [
+        'user_id',
     	'voornaam',
         'achternaam',
         'telefoonnummer',

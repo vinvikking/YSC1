@@ -17,7 +17,6 @@ class CampaignTableSeeder extends Seeder
     {
     
 
-
             $company = new User();
             $company->name = 'Default Business Name';
             $company->email = 'Business@example.com';

@@ -73,18 +73,21 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        // $t = Influencer::where('user_id', '=' ,Auth::id()); 
-        // $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
+        //$t = Influencer::where('user_id', '=' ,Auth::id()); 
+      //  $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
+       // $influencer = Influencer::where('user_id' , '=' , $user->id )->get('user_id');
 
         // if ($user->id === ) {
         //     return view('user.edit', compact('user'));
         // }
-
+            $influencer = Influencer::where('type', 'user_id');
         // // Check if user is the post author
         // if ($user->id === $post->author_id) {
         //     return true;
         // }
-        $this->authorize('edit', auth()->user());
+       //  $this->authorize('edit', auth()->user());
+
+        dd($user);
         return view('user.edit', compact('user')); 
         
         // $user1 = User::with('influencer')->get();
