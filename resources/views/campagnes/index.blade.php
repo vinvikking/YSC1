@@ -38,14 +38,14 @@
                 <th>{{$campagne->description}}</th>
             @endif
             @if (!empty($search) && !empty($term) && $term=="startdate")
-                <th>{!!$campagne->startdate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->start_datetimeTz)!!}</th>
+                <th>{!!$campagne->startdate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->startDateTime)!!}</th>
             @else
-                <th>{{$campagne->startdate}}</th>
+                <th>{{$campagne->startDateTime}}</th>
             @endif
             @if (!empty($search) && !empty($term) && $term=="enddate")
-                <th>{!!$campagne->enddate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->end_datetimeTz)!!}</th>
+                <th>{!!$campagne->enddate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->endDateTime)!!}</th>
             @else
-                <th>{{$campagne->enddate}}</th>
+                <th>{{$campagne->endDateTime}}</th>
             @endif
             <th><a class="btn btn-primary" href="{{route('campagnes.show', $campagne->id)}}">Details</th>
         </tr>

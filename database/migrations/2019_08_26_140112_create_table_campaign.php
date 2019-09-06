@@ -13,11 +13,22 @@ class CreateTableCampaign extends Migration
      */
     public function up()
     {
+
+        //Schema::dropIfExists('campaign');
+
         Schema::create('campaign', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('business_id');
             $table->string('title');
+            $table->string('city');
+            $table->string('postal_code');
+            $table->string('contact_name');
+            $table->string('contact_phone');
+            $table->string('contact_phone2');
+            $table->string('contact_email');
             $table->text('description')->nullable();
+            $table->dateTime('startDateTime');
+            $table->dateTime('endDateTime');
             $table->string('image');
             $table->timestamps();
 
