@@ -13,7 +13,7 @@
             'url' => 'campagnes',
             'results' => $campagnes,
             'terms' => ['campagne', 'omschrijving'],
-            'columns' => ['#', 'Campagne', 'Omschrijving'],
+            'columns' => ['#', 'Campagne', 'Omschrijving', 'Startdatum' , 'Einddatum'],
         ]
     ])
     @foreach ($campagnes as $campagne)
@@ -36,6 +36,16 @@
                 <th>{!!$campagne->description = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->description)!!}</th>
             @else
                 <th>{{$campagne->description}}</th>
+            @endif
+            @if (!empty($search) && !empty($term) && $term=="startdate")
+                <th>{!!$campagne->startdate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->start_datetimeTz)!!}</th>
+            @else
+                <th>{{$campagne->startdate}}</th>
+            @endif
+            @if (!empty($search) && !empty($term) && $term=="enddate")
+                <th>{!!$campagne->enddate = str_ireplace($search, "<mark><u>$search</u></mark>", $campagne->end_datetimeTz)!!}</th>
+            @else
+                <th>{{$campagne->enddate}}</th>
             @endif
             <th><a class="btn btn-primary" href="{{route('campagnes.show', $campagne->id)}}">Details</th>
         </tr>

@@ -12,7 +12,8 @@
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-column"> 
         <div class="text-center">
-        <img class="p-2" src="{{secure_asset('images/403.png')}}" height="400" width="320">
+
+        <img class="p-2" src="{{secure_asset('images/pexels-photo-122383.jpeg') }}" height="400" width="320">
         </div>
         <h1 class="p-2 text-center"> Error: 401</h1>
         <h3 class="p-2 text-center"> Verboden! U begeeft zich op glad ijs. U bent niet bevoegd deze pagina te bekijken. </h3>
