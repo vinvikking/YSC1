@@ -29,7 +29,6 @@ Route::Group(['middleware' => ['auth']], function() {
 
 
 
-
 //Business routing
 // Campaign
 Route::get('campagnes/search', 'CampaignController@search')->name('campagnesS');
@@ -45,7 +44,8 @@ Route::resource('analytics', 'AnalyticsController');
 //Home routing
 //Route::get('/home', 'HomeController@index')->name('home');
 
-
+// Ingeschreven Campaigns
+Route::resource('campaignsignup', 'CampaignSignupController');
 // //Language routing
 // Route::get(‘locales/{lang}’, ‘Locale@index’);
 

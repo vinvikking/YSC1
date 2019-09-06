@@ -27,4 +27,9 @@ class Influencer extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    public function CampaignSignUp() {
+       return $this->hasMany(CampaignSignUp::class, 'Influencer_id');
+    }
+
 }

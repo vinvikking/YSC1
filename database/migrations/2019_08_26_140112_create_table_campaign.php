@@ -19,8 +19,8 @@ class CreateTableCampaign extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image');
-            $table->timestamps();
-
+            $table->timestamps('start');
+           // $table->timestamps('end');
            $table->foreign('business_id')->references('id')->on('business');
         
         });

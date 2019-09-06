@@ -1,13 +1,12 @@
+@extends('layouts.templates.create')
 
-@extends('layouts.templates.edit')
-
-@section('page_title', 'Campagne aanpassen')
+@section('page_title', 'Campagne toevoegen')
 
 @section('breadcrumb')
     <ol class='breadcrumb'>
         <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
         <li class="breadcrumb-item"><a href="{{route('campagnes.index')}}">Campagnes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Campagne aanpassen</li>
+        <li class="breadcrumb-item active" aria-current="page">Nieuwe Campagne</li>
     </ol>
 @endsection
 

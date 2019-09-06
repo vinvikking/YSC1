@@ -87,7 +87,7 @@ class UserController extends Controller
         // }
        //  $this->authorize('edit', auth()->user());
 
-        dd($user);
+        dd($$user);
         return view('user.edit', compact('user')); 
         
         // $user1 = User::with('influencer')->get();

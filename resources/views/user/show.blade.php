@@ -30,10 +30,10 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="basisgegevens-tab" data-toggle="tab" href="#basisgegevens" role="tab" aria-controls="basisgegevens" aria-selected="true"><i class="far fa-address-card"></i>&nbsp;Basisgegevens</a>
+            <a class="nav-link active" id="basisgegevens-tab" data-toggle="tab" href="#basisgegevens" role="tab" aria-controls="basisgegevens" aria-selected="true"><i class="far fa-address-card"></i>&nbsp;Account gegevens</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="Influencer-tab" data-toggle="tab" href="#influencer" role="tab" aria-controls="influencer" aria-selected="false"><i class="fas fa-chart-line"></i>&nbsp;Influencer gegevens</a>
+            <a class="nav-link" id="Influencer-tab" data-toggle="tab" href="#influencer" role="tab" aria-controls="influencer" aria-selected="false"><i class="fas fa-chart-line"></i>&nbsp;Wachtwoord Wijzigen</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="doelen-tab" data-toggle="tab" href="#doelen" role="tab" aria-controls="doelen" aria-selected="false"><i class="fas fa-bullseye"></i>&nbsp;Business</a>
