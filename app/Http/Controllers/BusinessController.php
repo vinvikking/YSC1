@@ -12,6 +12,15 @@ class BusinessController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+      public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see Business', ['only' => 'index']);
+        $this->middleware('canAny:create Business', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update Business', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy Business', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         //

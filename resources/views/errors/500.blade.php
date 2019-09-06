@@ -12,7 +12,7 @@ v@extends('coreui::master')
 <div class="d-flex justify-content-center">
     <div class="d-flex flex-column"> 
         <div class="text-center">
-        <img class="p-2" src="{{secure_asset('images/500.png')}}" height="400" width="320">
+        <img class="p-2" src="{{secure_asset('images/pexels-photo-122383.jpeg') }}" height="400" width="320">
         </div>
         <h1 class="p-2 text-center"> Error: 500</h1>
         <h3 class="p-2 text-center"> Interne server fout. Blijkbaar gaat er bij mij iets niet goed. </h3>
