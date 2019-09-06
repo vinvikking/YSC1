@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+
 use App\Influencer;
 use Illuminate\Http\Request;
 
@@ -72,7 +74,7 @@ class InfluencerController extends Controller
      */
     public function edit(Influencer $influencer)
     {
-        //
+        return view('influencers.edit', compact('influencer'));
     }
 
     /**

@@ -138,7 +138,7 @@ return [
                 [
                     'text' => 'Beheer Subscribers',
                     'icon' => 'bell far',
-                    'url'  => '#',    
+                    'url'  => '/admin/subscribers',    
                 ],
                 [
                     'text' => 'Extra',
