@@ -32,17 +32,21 @@ return [
                 [
                     'text' => 'Alle campagnes',
                     'icon' => 'calendar-alt far',
-                    'url'  => '/campaign/list/',    
+                    'url'  => '/campagnes',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
                     'icon' => 'star far',
-                    'url'  => '/campaign/active',    
+                    'url'  => '/campaignsignup',    
                 ],
                 [
                     'text' => 'Statistieken',
                     'icon' => 'chart-line fas',
                     'url'  => '/influencer/statistics',    
+                ],[
+                    'text' => 'Instellingen',
+                    'icon' => 'cogs fas',
+                    'url'  => '/influencer/',s    
                 ]
             ]
          ],

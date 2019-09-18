@@ -20,10 +20,9 @@ class DatabaseSeeder extends Seeder
         factory(User::class, 10)->create();
         factory(Influencer::class, 5)->create();
         // factory(Business::class, 5)->create();
-        
 
         $this->call(RolesAndPermissionsSeeder::class);
-        $this->call(CampaignTableSeeder::class);
         $this->call(UserTableSeeder::class);
+        $this->call(CampaignTableSeeder::class);
     }
 }

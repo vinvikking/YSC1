@@ -14,9 +14,17 @@ class CampaignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see Campaign', ['only' => 'index']);
+        $this->middleware('canAny:create Campaign', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update Campaign', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy Campaign', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
-        
         $campagnes = Campaign::all();
         // $s = auth()->user()
        return view('campagnes.index', compact('campagnes'));
@@ -118,5 +126,4 @@ class CampaignController extends Controller
 
         return view('campagnes.index', compact('campagnes', 'search', 'term'));
     }
-
 }

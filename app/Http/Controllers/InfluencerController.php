@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 
 use App\Influencer;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class InfluencerController extends Controller
@@ -59,10 +61,10 @@ class InfluencerController extends Controller
      * @param  \App\Influencer  $influencer
      * @return \Illuminate\Http\Response
      */
-    public function show(User $influencer)
+    public function show(Influencer $influencer, User $User)
     {
         //
-        $user = Auth::user();
+       //dd($influencer->user_id);
         return view('influencers.show', compact('influencer', 'user'));
     }
 
@@ -74,7 +76,17 @@ class InfluencerController extends Controller
      */
     public function edit(Influencer $influencer)
     {
+
         return view('influencers.edit', compact('influencer'));
+
+        // Check if user is the post author
+        if(Auth::id() === $influencer->user_id){
+                return view('influencers.edit', compact('influencer'));     
+            }
+        else{
+                toastr()->error('U heeft geen toegang om deze gebruiker te wijzigen');
+                return abort('403'); // deny
+            }
     }
 
     /**
@@ -123,4 +135,5 @@ class InfluencerController extends Controller
 
         return view('influencers.index', compact('influencers', 'search', 'term'));
     }
+
 }

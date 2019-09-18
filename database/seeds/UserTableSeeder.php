@@ -86,22 +86,5 @@ class UserTableSeeder extends Seeder
                 'email'=> 'employee@example.com'
             ]);
 
-
-
-
-
-
-    // Superadmin Users
-
-    // $Vincent = new User();
-    // $Vincent->name = 'Vincent Roeland';
-    // $Vincent->email = 'vincentroeland@laravel.com';
-    // $Vincent->password = bcrypt('secret');
-    // $Vincent->imageable_id = 3;
-    // $Vincent->imageable_type = 'App\Business';
-    // $Vincent->save();
-    // $Vincent->assignRole('superadmin');
-
-
     }
 }

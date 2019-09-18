@@ -102,9 +102,9 @@ class RolesAndPermissionsSeeder extends Seeder
             $superadmin->givePermissionTo($perm->name);
         }
 
-        $Business->givePermissionTo('see Business');
-        $Influencer->givePermissionTo('see Influencer', 'edit user');
-        $default->givePermissionTo('access adminpage');
+        $Business->givePermissionTo('see Business', 'create Campaign', 'see Campaign', 'update Campaign');
+        $Influencer->givePermissionTo('see Influencer', 'see Campaign');
+        // $default->givePermissionTo('access adminpage');
 
         //Give all users a role
         $users = User::all();

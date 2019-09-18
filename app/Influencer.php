@@ -8,6 +8,7 @@ class Influencer extends Model
 {
     protected $table = 'influencers';
     protected $fillable = [
+        'user_id',
     	'voornaam',
         'achternaam',
         'telefoonnummer',
@@ -26,4 +27,7 @@ class Influencer extends Model
         return $this->belongsTo('App/User');
     }
 
+    public function CampaignSignUp() {
+       return $this->hasMany(CampaignSignUp::class, 'Influencer_id');
+    }
 }

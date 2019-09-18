@@ -2,28 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Business;
+use App\CampaignSignUp;
+use App\Campaign;
+use App\Influencer;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class BusinessController extends Controller
+class CampaignSignupController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('canAny:see Business', ['only' => 'index']);
-        $this->middleware('canAny:create Business', ['only' => ['create', 'store']]);
-        $this->middleware('canAny:update Business', ['only' => ['edit', 'update']]);
-        $this->middleware('canAny:destroy Business', ['only' => ['destroy']]);
-    }
-
     public function index()
     {
-        return view('business.index', compact('business'));
+       // $CampaignSignUp = CampaignSignUp::all();
+        $campagnes = Campaign::orderBy('created_at', 'desc')->take(3)->get();
+        return view('campaignSignUp.index', compact('campagnes'));
     }
 
     /**
@@ -50,10 +47,10 @@ class BusinessController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Business  $business
+     * @param  \App\CampaignSignUp  $campaignSignUp
      * @return \Illuminate\Http\Response
      */
-    public function show(Business $business)
+    public function show(CampaignSignUp $campaignSignUp)
     {
         //
     }
@@ -61,10 +58,10 @@ class BusinessController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Business  $business
+     * @param  \App\CampaignSignUp  $campaignSignUp
      * @return \Illuminate\Http\Response
      */
-    public function edit(Business $business)
+    public function edit(CampaignSignUp $campaignSignUp)
     {
         //
     }
@@ -73,10 +70,10 @@ class BusinessController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Business  $business
+     * @param  \App\CampaignSignUp  $campaignSignUp
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Business $business)
+    public function update(Request $request, CampaignSignUp $campaignSignUp)
     {
         //
     }
@@ -84,10 +81,10 @@ class BusinessController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Business  $business
+     * @param  \App\CampaignSignUp  $campaignSignUp
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Business $business)
+    public function destroy(CampaignSignUp $campaignSignUp)
     {
         //
     }

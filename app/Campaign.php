@@ -16,4 +16,10 @@ class Campaign extends Model
     public function business() {
         return $this->belongsTo(Business::class);
     }
+
+    public function campaignsignup() {
+       return $this->hasMany(Campaign::class, 'campaign_id');
+    }
+
+    
 }
