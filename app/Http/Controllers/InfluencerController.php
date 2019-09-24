@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-
 use App\Influencer;
 use App\User;
 use Illuminate\Support\Facades\Auth;

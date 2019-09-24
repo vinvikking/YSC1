@@ -13,6 +13,8 @@ class CreateIngeschrevenList extends Migration
      */
     public function up()
     {
+
+
         Schema::create('ingeschreven__list', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('campaign_id');

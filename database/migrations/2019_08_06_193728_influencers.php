@@ -13,6 +13,8 @@ class Influencers extends Migration
      */
     public function up()
     {
+
+
         Schema::create('influencers', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('voornaam');

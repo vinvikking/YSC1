@@ -14,8 +14,6 @@ class CreateTableCampaign extends Migration
     public function up()
     {
 
-        //Schema::dropIfExists('campaign');
-
         Schema::create('campaign', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('business_id');
@@ -30,7 +28,7 @@ class CreateTableCampaign extends Migration
             $table->dateTime('startDateTime');
             $table->dateTime('endDateTime');
             $table->string('image');
-            $table->timestamps('start');
+            //$table->timestamps('start');
            // $table->timestamps('end');
            $table->foreign('business_id')->references('id')->on('business');
         

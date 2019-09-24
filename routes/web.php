@@ -40,7 +40,7 @@ Route::resource('/influencers', 'InfluencerController');
 Route::resource('/user', 'UserController');
 //Analytics routing
 Route::resource('analytics', 'AnalyticsController');
-
+Route::resource('/subscription', 'SubscriptionController');
 //Home routing
 //Route::get('/home', 'HomeController@index')->name('home'); 
 
