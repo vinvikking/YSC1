@@ -28,8 +28,9 @@ class CreateTableCampaign extends Migration
             $table->dateTime('startDateTime');
             $table->dateTime('endDateTime');
             $table->string('image');
-            //$table->timestamps('start');
-           // $table->timestamps('end');
+            $table->timestamps();
+            // $table->timestamps('start');
+           //  $table->timestamps('end');
            $table->foreign('business_id')->references('id')->on('business');
         
         });
