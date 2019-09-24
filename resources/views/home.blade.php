@@ -15,12 +15,38 @@
                 <div class="card-header">
                     Featured
                 </div>
-                <div class="card-body" style="max-width: 100%;">
-                
+                <div class="card-body">
 
-                    <h5 class="card-title">Special title treatment</h5>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="images/ " alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="..." alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="..." alt="Third slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+                   <!--  <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
             </div>
         </div>
@@ -53,23 +79,6 @@
                 <div class="card-body text-danger">
                     <p class="card-text">Or make use of some slightly less intense coloring, which can convey your intentions well enough too.</p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100" src="images/Stock1.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100" src="images/Stock2.gif" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100" src="images/Stock3.jpg" alt="Third slide">
-                        </div>
-                      </div>
-                    </div>
             </div>
         </div>
     </div>
