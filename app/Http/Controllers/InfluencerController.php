@@ -74,6 +74,9 @@ class InfluencerController extends Controller
      */
     public function edit(Influencer $influencer)
     {
+
+        return view('influencers.edit', compact('influencer'));
+
         // Check if user is the post author
         if(Auth::id() === $influencer->user_id){
                 return view('influencers.edit', compact('influencer'));     

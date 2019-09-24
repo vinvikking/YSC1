@@ -46,7 +46,7 @@ return [
                 ],[
                     'text' => 'Instellingen',
                     'icon' => 'cogs fas',
-                    'url'  => '/influencer/',s    
+                    'url'  => '/influencer/',   
                 ]
             ]
          ],
@@ -110,12 +110,12 @@ return [
                 [
                     'text' => 'Overzicht',
                     'icon' => 'file-invoice fas',
-                    'url'  => '/subscription/list',    
+                    'url'  => '/subscription',    
                 ],
                                 [
                     'text' => 'Beheren',
                     'icon' => 'cogs fas',
-                    'url'  => '#',    
+                    'url'  => '/subscription/edit',    
                 ],
                 [
                     'text' => 'Feedback',
@@ -142,7 +142,7 @@ return [
                 [
                     'text' => 'Beheer Subscribers',
                     'icon' => 'bell far',
-                    'url'  => '#',    
+                    'url'  => '/admin/subscribers',    
                 ],
                 [
                     'text' => 'Extra',

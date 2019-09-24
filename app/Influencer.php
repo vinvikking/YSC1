@@ -23,13 +23,11 @@ class Influencer extends Model
         return $this->morphOne(User::class, 'imageable');
     }
 
-
-    public function user() {
-        return $this->belongsTo('App\User');
+    public function user(){
+        return $this->belongsTo('App/User');
     }
 
     public function CampaignSignUp() {
        return $this->hasMany(CampaignSignUp::class, 'Influencer_id');
     }
-
 }

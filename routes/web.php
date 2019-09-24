@@ -40,14 +40,14 @@ Route::resource('/influencers', 'InfluencerController');
 Route::resource('/user', 'UserController');
 //Analytics routing
 Route::resource('analytics', 'AnalyticsController');
-
+Route::resource('/subscription', 'SubscriptionController');
 //Home routing
-//Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home'); 
 
 // Ingeschreven Campaigns
 Route::resource('campaignsignup', 'CampaignSignupController');
 // //Language routing
-// Route::get(‘locales/{lang}’, ‘Locale@index’);
+Route::get('locales/{lang}', 'Locale@index');
 
 //Language routing
 Route::get('home', 'HomeController@index')->name('home');

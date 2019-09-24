@@ -3,7 +3,7 @@
 @section('breadcrumb')
     <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item"><a href="/analytics ">Analytics</a></li>
+    <li class="breadcrumb-item"><a href="/subscription">Abonnement</a></li>
     </ol>
 @endsection
 
@@ -54,7 +54,7 @@
         <div class="card-header"> 
            	<div class="card-body">
            		<div class="card">
-          			 <form action="{{route('analytics.store')}}" method="POST">
+          			 <form action="{{route('subscription.store')}}" method="POST">
            @csrf
            <div class="p-4">
             <div class="px-4 py-2">
@@ -71,7 +71,7 @@
                </div>
            @endif
            <button class="btn btn-success mt-3 mb-3 mr-2 float-right" type="submit">Creëer rapportage</button>
-           <a class="btn btn-danger mt-3 mb-3 mr-2 float-right" href="{{route('analytics.index')}}">Annuleren</a>
+           <a class="btn btn-danger mt-3 mb-3 mr-2 float-right" href="{{route('subscription.index')}}">Annuleren</a>
 
        </form>
            		</div>

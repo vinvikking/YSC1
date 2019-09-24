@@ -13,6 +13,7 @@ class CreateBusinessTable extends Migration
      */
     public function up()
     {
+
         Schema::create('business', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('user_id');

@@ -1,4 +1,6 @@
 @extends('layouts.templates.show')
+@extends('layouts.templates.edit')
+@section('page_title', trans('influencers.HeadShowPage'))
 
 @section('page_title')
     Gebruiker {{$influencer->user->naam}}
@@ -27,6 +29,16 @@
 @endsection
 
 @section('card_body')
+
+    <form action="{{route('influencers.index')}}" method="POST">
+        @csrf
+        <h5>Basisgegevens</h5>
+        <div class="d-flex">
+            {{--Column 1--}}
+            <div class="d-flex flex-fill flex-column">
+                <div class="pr-2">
+                    <label for="voornaam">Naam&nbsp;</label>
+                    <input type="text" id="voornaam" class="form-control mb-2" name="titel" placeholder="{{$influencer->name}}" tabindex="1" required>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
