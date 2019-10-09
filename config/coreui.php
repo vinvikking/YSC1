@@ -19,30 +19,39 @@ return [
      */
     'menu' => [
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see influencer',
             'text' => 'Influencer',
-            'url'  => '/Influencer',
+            'url'  => '/Influencer/',
             'icon' => 'users fas',
             'submenu' => [
+                 [
+                    'text' => 'Alle influencer',
+                    'icon' => 'calendar-alt far',
+                    'url'  => '/influencers',    
+                ],
                 [
                     'text' => 'Alle campagnes',
                     'icon' => 'calendar-alt far',
-                    'url'  => '/campaign/list',    
+                    'url'  => '/campagnes',    
                 ],
                 [
                     'text' => 'Actieve campagnes',
                     'icon' => 'star far',
-                    'url'  => '/campaign/active',    
+                    'url'  => '/campaignsignup',    
                 ],
                 [
                     'text' => 'Statistieken',
                     'icon' => 'chart-line fas',
                     'url'  => '/influencer/statistics',    
+                ],[
+                    'text' => 'Instellingen',
+                    'icon' => 'cogs fas',
+                    'url'  => '/influencer/',   
                 ]
             ]
          ],
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Business',
             'text' => 'Business',
             'url'  => '/Business',
             'icon' => 'user-tie fas',
@@ -70,7 +79,7 @@ return [
             ]
          ],
          [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Business Analytics',
             'text' => 'Business Analytics',
             'url'  => '/analytics',
             'icon' => 'eye far',
@@ -93,7 +102,7 @@ return [
             ]
          ],
                   [
-            'permission' => 'see leerlingen',
+            'permission' => 'see Abbonement',
             'text' => 'Abonnement',
             'url'  => '/subscription',
             'icon' => 'wallet fas',
@@ -101,12 +110,12 @@ return [
                 [
                     'text' => 'Overzicht',
                     'icon' => 'file-invoice fas',
-                    'url'  => '/subscription/list',    
+                    'url'  => '/subscription',    
                 ],
                                 [
                     'text' => 'Beheren',
                     'icon' => 'cogs fas',
-                    'url'  => '#',    
+                    'url'  => '/subscription/edit',    
                 ],
                 [
                     'text' => 'Feedback',
@@ -133,7 +142,7 @@ return [
                 [
                     'text' => 'Beheer Subscribers',
                     'icon' => 'bell far',
-                    'url'  => '#',    
+                    'url'  => '/admin/subscribers',    
                 ],
                 [
                     'text' => 'Extra',

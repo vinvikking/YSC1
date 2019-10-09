@@ -13,13 +13,22 @@ class Influencers extends Migration
      */
     public function up()
     {
+
+
         Schema::create('influencers', function (Blueprint $table) {
             $table->Increments('id');
+            $table->string('voornaam');
             $table->unsignedInteger('user_id');
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->string('image');
+            $table->string('achternaam');
+            $table->text('instagram_name');
+            $table->integer('leeftijd');
+            $table->string('telefoonnummer');
+            $table->string('email');
+            $table->integer('volgers');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 

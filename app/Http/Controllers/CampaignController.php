@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App;
+
 use App\Campaign;
 use Illuminate\Http\Request;
 
@@ -12,11 +14,17 @@ class CampaignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see Campaign', ['only' => 'index']);
+        $this->middleware('canAny:create Campaign', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update Campaign', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy Campaign', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
-
-
-
         $campagnes = Campaign::all();
         // $s = auth()->user()
        return view('campagnes.index', compact('campagnes'));
@@ -50,9 +58,9 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function show(Campagne $campagne)
+    public function show(Campaign $campagne)
     {
-        return view('campagnes.show', compact('campagnes'));
+        return view('campagnes.show', compact('campagne'));
     }
 
     /**
@@ -61,9 +69,9 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function edit(Campagne $campagne)
+    public function edit(Campaign $campagne)
     {
-        return view('campagnes.edit', compact('campagnes'));
+        return view('campagnes.edit', compact('campagne'));
     }
 
     /**
@@ -73,7 +81,7 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Campagne $campagne)
+    public function update(Request $request, Campaign $campagne)
     {
         //
     }
@@ -84,7 +92,7 @@ class CampaignController extends Controller
      * @param  \App\Campagne  $campagne
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Campagne $campagne)
+    public function destroy(Campaign $campagne)
     {
         //
     }
@@ -118,5 +126,4 @@ class CampaignController extends Controller
 
         return view('campagnes.index', compact('campagnes', 'search', 'term'));
     }
-
 }

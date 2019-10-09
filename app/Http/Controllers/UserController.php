@@ -1,10 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\User;
+use App\Influencer;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
 class UserController extends Controller
 {
     /**
@@ -12,11 +11,18 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see user', ['only' => 'index']);
+        $this->middleware('canAny:create user', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update user', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy user', ['only' => ['destroy']]);
+    }
     public function index()
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +32,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -37,29 +42,63 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
+        return view('user.show', compact('user', 'influencer'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
-    }
+        //$t = Influencer::where('user_id', '=' ,Auth::id()); 
+      //  $influencer = Influencer::where('user_id' , '=' , $user->id )->get();
+       // $influencer = Influencer::where('user_id' , '=' , $user->id )->get('user_id');
 
+        // if ($user->id === ) {
+        //     return view('user.edit', compact('user'));
+        // }
+            $influencer = Influencer::where('type', 'user_id');
+        // // Check if user is the post author
+        // if ($user->id === $post->author_id) {
+        //     return true;
+        // }
+       //  $this->authorize('edit', auth()->user());
+
+        dd($$user);
+        return view('user.edit', compact('user')); 
+        
+        // $user1 = User::with('influencer')->get();
+
+        // dd($user->id);
+        // $t = Influencer::get()->where('user_id', '=' ,Auth::id());
+
+        // $t = Influencer::get()->where('user_id', '===' ,Auth::id());
+        // dd($t);
+        // dd(auth::id());
+
+        // if(Auth::id() === $t->user_id){
+        //         return view('user.edit', compact('user'));      
+        //     }
+        // else{
+        //         toastr()->error('U heeft geen toegang om deze gebruiker te wijzigen');
+        //         return abort('403'); // deny
+        //     }
+
+        
+        //dd(Auth::id() == Influencer::id('user_id'));
+        
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -71,7 +110,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,15 +119,5 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-
-    public function admin(){
-        return view('admin.admin');
-    }
-
-    public function user(){
-        return view('admin.blade.php');
     }
 }
