@@ -11,6 +11,16 @@ class AnalyticsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('canAny:see Analytics', ['only' => 'index']);
+        $this->middleware('canAny:create Analytics', ['only' => ['create', 'store']]);
+        $this->middleware('canAny:update Analytics', ['only' => ['edit', 'update']]);
+        $this->middleware('canAny:destroy Analytics', ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         //
