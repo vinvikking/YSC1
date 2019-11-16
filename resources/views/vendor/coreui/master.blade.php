@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/coreui/css/coreui.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/coreui/fontawesome/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/flag-icon-css/css/flag-icon.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/coreui-icons.min.css">
     <!-- Custom CSS -->
     @stack('css')
     {{-- Toastr --}}

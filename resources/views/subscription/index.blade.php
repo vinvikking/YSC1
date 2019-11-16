@@ -60,48 +60,74 @@
     <div class="card-body">
       <div class="card">
         <div class="px-4 py-2">
-            <h3 style="color: #20a8d8; text-align: center;"><b>Abbonementen</b></h3>
+            <h2 style="color: #20a8d8; text-align: center;"><b>Abbonementen</b></h2>
               <hr>
         </div>
   <div class="card-body">
     <div class="row">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" style="box-shadow: 5px 10px 5px grey;">
               <div class="card-body">
-                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
+                <img class="card-img-top" src="{{asset('images/business.png') }}" style="width: 80%; max-width:600px; margin-left: 10%;" alt="Business Analytics">
                   <hr>
-                    <p class="card-text">You can also use headers like this image!</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <hr>
+                    <h4 style="color: #20a8d8; text-align: center;"><b>Business Analytics</b></h4>
+                    <p  style="text-align: center;"><b>€9,99 / maand</b></p>    
+                </div>
+                <div class="card-footer" style="text-align: center;">
                     <a href="#" class="btn btn-primary">Abboneren</a>
-                </div>
-                <div class="card-footer">
-                    Cards can even have footers
+                    <p style="font-size: 10px; margin-top: 5px;"><i>Er zijn gebruiksvoorwaarden van toepassing.</i></p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">You can also use headers like this image!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card" style="box-shadow: 5px 10px 5px grey;">
+              <div class="card-body">
+                <img class="card-img-top" src="{{asset('images/business.png') }}" style="width: 80%; max-width:600px; margin-left: 10%;" alt="Business Analytics">
+                  <hr>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <hr>
+                    <h4 style="color: #20a8d8; text-align: center;"><b>Business Analytics</b></h4>  
+                    <p  style="text-align: center;"><b>€9,99 / maand</b></p>     
                 </div>
-                <div class="card-footer">
-                    Cards can even have footers
+                <div class="card-footer" style="text-align: center;">
+                    <a href="#" class="btn btn-primary">Abboneren</a>
+                    <p style="font-size: 10px; margin-top: 5px;"><i>Er zijn gebruiksvoorwaarden van toepassing.</i></p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">You can also use headers like this image!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card" style="box-shadow: 5px 10px 5px grey;">
+              <div class="card-body">
+                <img class="card-img-top" src="{{asset('images/business.png') }}" style="width: 80%; max-width:600px; margin-left: 10%;" alt="Business Analytics">
+                  <hr>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Geniet van advertentievrije muziek</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Family Mix: een playlist voor</p>
+                  <p style=" margin-bottom: 0.5rem;"><i class="fas fa-check"></i> 6 Premium-accounts voor gezinsleden</p>
+                  <hr>
+                    <h4 style="color: #20a8d8; text-align: center;"><b>Business Analytics</b></h4>  
+                    <p  style="text-align: center;"><b>€9,99 / maand</b></p>     
                 </div>
-                <div class="card-footer">
-                    Cards can even have footers
+                <div class="card-footer" style="text-align: center;">
+                    <a href="#" class="btn btn-primary">Abboneren</a>
+                    <p style="font-size: 10px; margin-top: 5px;"><i>Er zijn gebruiksvoorwaarden van toepassing.</i></p>
                 </div>
             </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
