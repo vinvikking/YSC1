@@ -50,6 +50,81 @@
   </div><!--/.col-->
 </div><!--/.row-->
 
+
+
+
+
+
+<div class="card">
+  <div class="card-header"> 
+    <div class="card-body">
+      <div class="card">
+        <div class="px-4 py-2">
+            <h3 style="color: #20a8d8; text-align: center;"><b>Abbonementen</b></h3>
+              <hr>
+        </div>
+  <div class="card-body">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
+                  <hr>
+                    <p class="card-text">You can also use headers like this image!</p>
+                    <a href="#" class="btn btn-primary">Abboneren</a>
+                </div>
+                <div class="card-footer">
+                    Cards can even have footers
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">You can also use headers like this image!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer">
+                    Cards can even have footers
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/300x180" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">You can also use headers like this image!</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer">
+                    Cards can even have footers
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	   <div class="card">
         <div class="card-header"> 
            	<div class="card-body">
