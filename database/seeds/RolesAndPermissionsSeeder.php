@@ -47,6 +47,9 @@ class RolesAndPermissionsSeeder extends Seeder
             'name' => 'default'
         ]);
 
+        $BusinessAnalytics = Role::create([
+            'name' => 'Business Analytics'
+        ]);
 
 
 
