@@ -5,6 +5,7 @@ use App\User;
 use App\Role;
 use App\Campaign;
 use App\Business;
+use App\CampaignSignUp;
 
 class CampaignTableSeeder extends Seeder
 {
@@ -37,7 +38,6 @@ class CampaignTableSeeder extends Seeder
                 'branch'=> 'Food',
                 'email'=> 'Business@example.com'
             ]);
-
 
     $dt = now();
     $dateNow = $dt->toDateTimeString();
@@ -131,6 +131,14 @@ class CampaignTableSeeder extends Seeder
     $campaign6->endDateTime = $dateNow;
     $campaign6->image = '0';
     $campaign6->save();
+
+
+    $CampaignSignUp = new CampaignSignUp();
+    $CampaignSignUp->campaign_id = $DefaultBusiness->id;
+    $CampaignSignUp->influencer_id = 1;
+    $CampaignSignUp->startDateTime = $dateNow;
+    $CampaignSignUp->endDateTime = $dateNow;
+    $CampaignSignUp->save();
 
 
     }

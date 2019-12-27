@@ -21,6 +21,9 @@ class Influencers extends Migration
             $table->unsignedInteger('user_id');
             $table->string('achternaam');
             $table->text('instagram_name');
+            $table->text('facebook_name');
+            $table->text('twitter_name');
+            $table->text('interesse');
             $table->integer('leeftijd');
             $table->string('telefoonnummer');
             $table->string('email');

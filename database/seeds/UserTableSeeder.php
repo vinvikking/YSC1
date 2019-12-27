@@ -33,6 +33,9 @@ class UserTableSeeder extends Seeder
             'achternaam' => 'Roeland',
             'volgers' => 500,
             'instagram_name' => '@VincentRoeland',
+            'facebook_name' => '@VincentRoeland',
+            'twitter_name' => '@Vincentroeland97',
+            'interesse' => 'Voetballen',
             'leeftijd' => 22,
             'telefoonnummer' => "0612345678",
             'email'=> 'Vincent@laravel.test'
@@ -56,6 +59,9 @@ class UserTableSeeder extends Seeder
             'achternaam' => 'De Witte',
             'volgers' => 100,
             'instagram_name' => '@DerekCorky',
+            'facebook_name' => '@Derek',
+            'twitter_name' => '@Derek',
+            'interesse' => 'Golf',
             'leeftijd' => 34,
             'telefoonnummer' => "0612345678",
             'email'=> 'Derek@laravel.com'
@@ -81,6 +87,9 @@ class UserTableSeeder extends Seeder
                 'achternaam' => 'Roeland',
                 'volgers' => 1000,
                 'instagram_name' => '@Default',
+                'facebook_name' => '@Default',
+                'twitter_name' => '@Default',
+                'interesse' => 'Default',
                 'leeftijd' => 25,
                 'telefoonnummer' => "0612345678",
                 'email'=> 'employee@example.com'

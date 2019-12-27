@@ -15,12 +15,12 @@ class CreateIngeschrevenList extends Migration
     {
 
 
-        Schema::create('ingeschreven__list', function (Blueprint $table) {
+        Schema::create('CampaignSignUp', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('campaign_id');
             $table->unsignedInteger('influencer_id');
-            $table->timestamps();
-
+            $table->dateTime('startDateTime');
+            $table->dateTime('endDateTime');
             $table->foreign('campaign_id')->references('id')->on('campaign');
             $table->foreign('influencer_id')->references('id')->on('influencers');
         });
@@ -33,6 +33,6 @@ class CreateIngeschrevenList extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingeschreven__list');
+        Schema::dropIfExists('CampaignSignUp');
     }
 }
