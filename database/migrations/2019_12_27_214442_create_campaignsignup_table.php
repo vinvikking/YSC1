@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIngeschrevenList extends Migration
+class CreateCampaignsignupTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateIngeschrevenList extends Migration
      */
     public function up()
     {
-
-
-        Schema::create('ingeschreven', function (Blueprint $table) {
+        Schema::create('campaignsignups', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('campaign_id');
             $table->unsignedInteger('influencer_id');
-            $table->dateTime('startDateTime');
-            $table->dateTime('endDateTime');
+            $table->timestamps();
             $table->foreign('campaign_id')->references('id')->on('campaign');
             $table->foreign('influencer_id')->references('id')->on('influencers');
         });
@@ -33,6 +30,6 @@ class CreateIngeschrevenList extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingeschreven');
+        Schema::dropIfExists('campaignsignups');
     }
 }

@@ -122,7 +122,7 @@
                                 <th class="w-75">Aantal Volgers</th>
                             </tr>
                                 
-                                    <td>Verder te developen</td>
+                                   <!--  <td>{{$user->influencer->instagram_name}}</td> -->
                                     <td>fdsgsdfsdfsdfgdfsg</td>
                             </thead>
                         </table>

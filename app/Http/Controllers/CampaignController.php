@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App;
-
+use App\Influencer;
 use App\Campaign;
 use Illuminate\Http\Request;
 
@@ -60,7 +60,9 @@ class CampaignController extends Controller
      */
     public function show(Campaign $campagne)
     {
-        return view('campagnes.show', compact('campagne'));
+        $influencer = Influencer::where('id' , '=' , $campagne->id )->get();
+        return view('campagnes.show', compact('campagne', 'influencer'));
+       // return view('campagnes.show', compact('campagne'));
     }
 
     /**

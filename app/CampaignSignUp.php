@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class CampaignSignUp extends Model
 {
-    public function campaign() {
+
+	protected $table = 'campaignsignups';
+
+  public function campaign() {
         return $this->belongsTo(Campaign::class);
     }
 
