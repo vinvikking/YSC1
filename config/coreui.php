@@ -25,7 +25,7 @@ return [
             'icon' => 'users fas',
             'submenu' => [
                  [
-                    'text' => 'Alle influencer',
+                    'text' => 'Alle influencers',
                     'icon' => 'calendar-alt far',
                     'url'  => '/influencers',    
                 ],
@@ -43,10 +43,11 @@ return [
                     'text' => 'Statistieken',
                     'icon' => 'chart-line fas',
                     'url'  => '/influencer/statistics',    
-                ],[
-                    'text' => 'Instellingen',
+                ],
+                [
+                    'text' => 'Profielpagina',
                     'icon' => 'cogs fas',
-                    'url'  => '/influencer/',   
+                    'url'  => '/influencerprofile/',   
                 ]
             ]
          ],
@@ -78,6 +79,28 @@ return [
                 ]
             ]
          ],
+            [
+            'text' => 'Chat',
+            'url'  => '/chat',
+            'icon' => 'comments fas',
+            'submenu' => [
+                [
+                    'text' => 'Influencer 2 Influencer',
+                    'icon' => 'bell far',
+                    'url'  => '/chatinfluencer',    
+                ],
+                                [
+                    'text' => 'Influencer 2 Business',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Business 2 Business',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+            ]
+         ],        
          [
             'permission' => 'see Business Analytics',
             'text' => 'Business Analytics',
@@ -101,7 +124,7 @@ return [
                 ]
             ]
          ],
-                  [
+        [
             'permission' => 'see Abbonement',
             'text' => 'Abonnement',
             'url'  => '/subscription',
@@ -127,7 +150,7 @@ return [
          [
             'text' => 'Admin',
             'url'  => '/admin',
-            'icon' => 'person far',
+            'icon' => 'users-cog fas',
             'submenu' => [
                 [
                     'text' => 'Dashboard',
@@ -146,6 +169,33 @@ return [
                 ],
                 [
                     'text' => 'Extra',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+            ]
+         ],
+         [
+            'text' => 'Info',
+            'url'  => '/info',
+            'icon' => 'info fas',
+            'submenu' => [
+                [
+                    'text' => 'Over YSC',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                                [
+                    'text' => 'Contact',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Changelog',
+                    'icon' => 'bell far',
+                    'url'  => '#',    
+                ],
+                [
+                    'text' => 'Bug melden',
                     'icon' => 'bell far',
                     'url'  => '#',    
                 ],
