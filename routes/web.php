@@ -53,4 +53,11 @@ Route::get('locales/{lang}', 'Locale@index');
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('lang/{locale}', 'HomeController@lang');
 
+//Chat
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/chatinfluencer', 'ChatController@index');
+});
+
+Route::post('sendmessage', 'ChatController@sendMessage');
 
