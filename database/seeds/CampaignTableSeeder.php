@@ -133,11 +133,12 @@ class CampaignTableSeeder extends Seeder
     $campaign6->save();
 
 
+
     $CampaignSignUp = new CampaignSignUp();
     $CampaignSignUp->campaign_id = $DefaultBusiness->id;
     $CampaignSignUp->influencer_id = 1;
-    $CampaignSignUp->startDateTime = $dateNow;
-    $CampaignSignUp->endDateTime = $dateNow;
+    $CampaignSignUp->updated_at = $dateNow;
+    $CampaignSignUp->created_at = $dateNow;
     $CampaignSignUp->save();
 
 

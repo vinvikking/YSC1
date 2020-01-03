@@ -99,7 +99,7 @@
                         <div class="pl-2">
                         <div class="d-flex flex-column mb-3">
                         <h5>Afbeeldingen campagne</h5>
-                        <i>{{$campagne->postal_code}},{{$campagne->city}}</i>
+                        <i></i>
                    </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             </tr>
                                 
                                     <td>Verder te developen</td>
-                                    <td>fdsgsdfsdfsdfgdfsg</td>
+                                    <td></td>
                             </thead>
                         </table>
                 
